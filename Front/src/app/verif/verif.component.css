@@ -1,0 +1,232 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Breadcumb Styles */
+.breadcumb-wrapper {
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.breadcumb-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.breadcumb-description {
+    font-size: 1.2rem;
+}
+
+/* Process Section Styles */
+.process-section .title-area .sub-title {
+    color: #6C63FF;
+    font-weight: bold;
+}
+
+.process-section .sec-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.process-box-body {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.process-box-body:hover {
+    transform: translateY(-5px);
+}
+
+.process-number {
+    font-size: 2rem;
+    color: #6C63FF;
+    font-weight: bold;
+}
+
+.process-name {
+    margin-top: 15px;
+}
+
+.process-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.process-line img {
+    width: 100%;
+}
+
+/* Validation Section Styles */
+.validation-section .validation-form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.validation-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #6C63FF;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #6C63FF;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
+}
+
+.btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-purple {
+    background-color: #6C63FF;
+    border-color: #6C63FF;
+    color: #ffffff;
+}
+
+.btn-purple:hover {
+    background-color: #554dd8;
+    border-color: #554dd8;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    background-color: #0FC176;
+    color: #ffffff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+    transform: scale(1.1);
+}
+
+#cameraContainer {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+#cameraContainer.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+#cameraContainer.slide-in {
+    animation: slideIn 0.5s ease forwards;
+}
+
+/* Classes Section Styles */
+.classes-section .title-area .sub-title {
+    color: #6C63FF;
+    font-weight: bold;
+}
+
+.class-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.class-box:hover {
+    transform: translateY(-5px);
+}
+
+.class-profile .avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.class-fee {
+    font-size: 1.2rem;
+    color: #0FC176;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.class-info p {
+    font-weight: bold;
+    color: #333;
+}
+
+.vs-btn {
+    background-color: #6C63FF;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.vs-btn:hover {
+    background-color: #554dd8;
+}
+.flyer-image {
+    max-height: 500px; /* Example height for a flyer-like appearance */
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.flyer-image:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,51 @@
+   <!--vs-main-menu-wrapper start-->
+   <div class="sticky-wrapper">
+    <div class="sticky-active">
+        <div class="header-menu-area">
+            <div class="container position-relative">
+                <div class="row gx-20 align-items-center justify-content-between">
+                    <div class="col-auto">
+                        <div class="header-logo">
+                            <a routerLink="/home">
+                                <img src="./assets/assets/img/logo.svg" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <nav class="main-menu menu-style1 d-none d-lg-inline-block">
+                            <ul>
+                                    <li><a routerLink="/home" routerLinkActive="active" >Home</a></li>
+
+                                <li>
+                                    <a href="/welcome">Spaces</a>
+                                </li>
+                                <li><a routerLink="/about"  routerLinkActive="active"  >About</a></li>
+                    
+                                <li class="menu-item-has-children">
+                                    <a href="#">Blog</a>
+                                    <ul class="sub-menu">
+                                        <li><a routerLink="/blog"   routerLinkActive="active" >Blog</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a routerLink="/memory"  routerLinkActive="active" >Contact</a>
+                                    
+                                </li>
+                                <li>
+                                    <div class="header-button">
+                                        <button type="button"  class="vs-btn wave-btn" (click)="logout()" >Logout</button>
+                                    </div>
+                                </li>
+                             
+                            </ul>
+                        </nav>
+                      
+                        <button type="button" class="vs-menu-toggle d-block d-lg-none"><i class="far fa-bars"></i> Menu</button>
+                    </div>
+              
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--vs-main-menu-wrapper end-->

@@ -1,0 +1,191 @@
+
+  
+  <!--======== About Section ========-->
+  <div class="breadcumb-wrapper" data-bg-src="./assets/assets/img/bg/breadcrumb-bg-1.jpg">
+    <div class="container">
+        <div class="breadcumb-content">
+            <h1 class="breadcumb-title">Blog Details</h1>
+            <ul class="breadcumb-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Blog Details</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--======== / About Section ========-->
+
+<!--======== Blog Section ========-->
+<section class="vs-blog-wrapper blog-details space-page">
+    <div class="container">
+        <div class="row gx-60">
+            <div class="col-xl-8 col-lg-7">
+                <div class="vs-blog blog-single wow fadeInUp" data-wow-delay="0.1s" *ngIf="article">
+                    <div class="blog-img">
+                        <img src="./assets/assets/img/blog/blog-single.jpg" alt="BLog Img">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fal fa-calendar-alt"></i><a href="blog-details.html">{{ article.date_publication | date }}</a></span>
+                            <span><i class="fal fa-user-tag"></i>by <a href="blog-details.html">{{ article.auteur.nom }}</a></span>
+                            <span><i class="fal fa-comments"></i><a href="blog-details.html">{{ article.nbcmntr }} Comments</a></span>
+                            <span><i class="fal fa-heart"></i><a href="blog-details.html">{{ article.nblikes }} Likes</a></span>
+
+                                <!-- <i class="far fa-heart" [ngClass]="{'liked': article.liked}"></i> -->
+                                <a  class="add_to_wishlist" (click)="likeArticle()"><i class="fa-solid fa-heart"  [ngClass]="{'liked': article.liked}"></i></a>
+
+                             
+                        </div>
+                        <h2 class="blog-title" >{{ article.titre }}</h2>
+                        <p>{{ article.contenu }}</p>
+                       
+                      </div>
+                    <div class="share-links clearfix wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="row justify-content-between">
+                            <!-- <div class="col-md-auto">
+                                <span class="share-links-title">Tags: </span>
+                                <div class="tagcloud"><a href="blog.html">Education</a> <a href="blog.html">Kids</a> <a href="blog.html">Care</a></div>
+                            </div> -->
+                            <div class="col-md-auto text-md-end">
+                                <span class="share-links-title">Share Now:</span>
+                                <ul class="multi-social">
+                                    <li>
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=permalink"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#share?url=permalink"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#share?url=permalink"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://instagramcom/share?url=permalink"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- / Share end -->
+                    <div class="blog-author d-md-flex align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="media-img">
+                            <img src="./assets/assets/img/blog/author-1.jpg" alt="Blog Author">
+                        </div>
+                        <div class="media-body">
+                            <p class="author-degi">Written by</p>
+                            <h3 class="author-name"><a href="blog.html">{{ article.auteur.nom }}</a></h3>
+                            <p class="author-text mb-0">{{ article.auteur.mail }}</p>
+                        </div>
+                    </div>
+                 
+                    <!-- Comment Start -->
+                    <div class="vs-comment-wrap wow fadeInUp" data-wow-delay="0.1s" *ngIf="commentaires">
+                        <h3 class="blog-inner-title">{{ article.nbcmntr }} Comments</h3>
+                        <ul class="comment-list">
+                            <li class="vs-comment">
+                                <div class="vs-post-comment">
+                                    <div class="comment-avater"><img src="./assets/assets/img/blog/author-2.jpg" alt="Comment Author" ></div>
+                                    <div class="comment-content" *ngFor="let commentaire of commentaires">
+                                        <span class="commented-on">{{ commentaire.date_publication | date }}</span>
+                                        <!-- <h4 class="name">{{ commentaire.auteur.nom }}</h4> -->
+                                        <p class="text">{{ commentaire.contenu }}</p>
+                                        <button (click)="translateComment(commentaire)">Traduire</button>
+                                        <p *ngIf="commentaire.translatedContent">Translated: {{ commentaire.translatedContent }}</p>
+
+                                        <div class="reply_and_edit">
+                                            <a href="#commentForm" class="reply-btn">Reply</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                               
+                            </li>
+                          
+                        </ul>
+                    </div>
+                    <!-- Comment Form -->
+
+
+
+
+                    <app-commentaire></app-commentaire>
+
+                </div> <!-- / Blog end -->
+            </div> <!-- / col-8 end -->
+            <!-- Sidebar -->
+            <div class="col-xl-4 col-lg-5">
+                <aside class="sidebar-area">
+                    <div class="widget widget_search wow fadeInUp" data-wow-delay="0.1s">
+                        <h4 class="widget_title">Search</h4>
+                        <form class="search-form">
+                            <input type="text" placeholder="Search Here">
+                            <button type="submit"><i class="far fa-search"></i></button>
+                        </form>
+                    </div>
+                  <div class="widget widget_categories wow fadeInUp" data-wow-delay="0.1s" >
+                            <h4 class="widget_title" >Categories</h4>
+                            <ul>
+                                <div   *ngFor="let cat of categoriesArticle">
+
+                                <li><a href="blog.html">{{cat.type}}</a> <span>10</span></li>
+                               </div>
+                            </ul>
+                        </div>
+                    <div class="widget wow fadeInUp" data-wow-delay="0.1s">
+                        <h4 class="widget_title">Popular Posts</h4>
+                        <div class="recent-post-wrap">
+                            <div class="recent-post">
+                                <div class="media-img">
+                                    <a href="blog-details.html"><img src="./assets/assets/img/blog/thumb-1.jpg" alt="Blog Image"></a>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="post-title"><a href="blog-details.html">User’s Pepare Using Story Guide Yes</a></h4>
+                                    <div class="recent-post-meta"><a href="blog.html"><i class="fal fa-calendar-alt"></i> Dec 12, 2023</a></div>
+                                </div>
+                            </div>
+                            <div class="recent-post">
+                                <div class="media-img">
+                                    <a href="blog-details.html"><img src="./assets/assets/img/blog/thumb-2.jpg" alt="Blog Image"></a>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="post-title"><a href="blog-details.html">How to prepare child for examination</a></h4>
+                                    <div class="recent-post-meta"><a href="blog.html"><i class="fal fa-calendar-alt"></i> Dec 12, 2023</a></div>
+                                </div>
+                            </div>
+                            <div class="recent-post">
+                                <div class="media-img">
+                                    <a href="blog-details.html"><img src="./assets/assets/img/blog/thumb-3.jpg" alt="Blog Image"></a>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="post-title"><a href="blog-details.html">Imortance of childcare for your kids</a></h4>
+                                    <div class="recent-post-meta"><a href="blog.html"><i class="fal fa-calendar-alt"></i> Dec 12, 2023</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget widget_tag_cloud wow fadeInUp" data-wow-delay="0.1s">
+                        <h4 class="widget_title">Most Used Tags</h4>
+                        <div class="tagcloud">
+                            <a href="blog.html">Child</a>
+                            <a href="blog.html">Kids</a>
+                            <a href="blog.html">Online</a>
+                            <a href="blog.html">Education</a>
+                            <a href="blog.html">Childcare</a>
+                            <a href="blog.html">Care</a>
+                            <a href="blog.html">Class</a>
+                            <a href="blog.html">Exam</a>
+                        </div>
+                    </div>
+                    <div class="widget widget_banner wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="banner">
+                            <img class="w-100" src="./assets/assets/img/blog/widget-banner.jpg" alt="banner">
+                        </div>
+                        <div class="content">
+                            <span class="text-theme">Hurry Up</span>
+                            <h3 class="h3">Get 20% Off</h3>
+                        </div>
+                        <a href="contact.html" class="vs-btn wave-btn banner-btn">Appointment</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+<!--======== / Blog Section ========-->

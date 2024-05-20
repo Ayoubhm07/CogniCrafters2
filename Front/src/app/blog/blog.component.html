@@ -1,0 +1,220 @@
+
+    <!--======== About Section ========-->
+    <div class="breadcumb-wrapper" data-bg-src="./assets/assets/img/bg/breadcrumb-bg-1.jpg">
+        <div class="container">
+            <div class="breadcumb-content">
+                <h1 class="breadcumb-title">Latest Posts</h1>
+                <ul class="breadcumb-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Latest Posts</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--======== / About Section ========-->
+
+    <!--======== Blog Section ========-->
+    <section class="vs-blog-wrapper space-page">
+        <div class="container">
+            <div class="row gx-60">
+                <div class="col-xl-8 col-lg-7">
+                    <div class="vs-blog blog-single wow fadeInUp" data-wow-delay="0.1s"  *ngFor="let art of article">
+                        <div class="blog-img">
+                            <a href="blog-details.html">
+                                <img src="./assets/assets/img/blog/blog-big-1.jpg" alt="BLog Img">
+                                <!-- <img [src]="getImageUrl(art)" alt="Image de l'article"> -->
+                            </a>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <a href="blog-details.html"><i class="fal fa-eye"></i> {{art.nbvues}} Views</a>
+                                <a href="blog-details.html"><i class="fal fa-comments"></i> {{art.nbcmntr}} Comments</a>
+                                <a href="blog-details.html"><i class="fal fa-calendar-alt"></i> {{art.date_publication | date}}</a>
+
+                            </div>
+                            <h3 class="blog-title"><a  [routerLink]="['/blog', art._id]">{{art.titre}}</a></h3>
+                            <p class="blog-text">{{art.contenu}}</p>
+
+                            <a [routerLink]="['/blog', art._id]"  class="link-btn">Read More <i class="far fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- <div class="vs-blog blog-single wow fadeInUp" data-wow-delay="0.1s" >
+                        <div class="blog-img vs-carousel" data-slide-show="1" data-md-slide-show="1">
+                            <a href="blog-details.html">
+                                <img src="./assets/assets/img/blog/blog-big-2.jpg" alt="BLog Img">
+                            </a>
+                            <a href="blog-details.html">
+                                <img src="./assets/assets/img/blog/blog-big-3.jpg" alt="BLog Img">
+                            </a>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <a href="blog-details.html"><i class="fal fa-eye"></i> 103 Views</a>
+                                <a href="blog-details.html"><i class="fal fa-comments"></i> 05 Comments</a>
+                                <a href="blog-details.html"><i class="fal fa-calendar-alt"></i> 11 June, 2023</a>
+                            </div>
+                            <h3 class="blog-title"><a href="blog-details.html">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing</a></h3>
+                            <p class="blog-text">Conveniently whiteboard team building architectures without sticky partnerships. Energistically redefine emerging paradigms after resource sucking bandwidth. Dramatically supply transparent expertise whereas market-driven testing procedures.</p>
+                            <a href="blog-details.html" class="link-btn">Read More <i class="far fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="vs-blog blog-single wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <a href="blog-details.html"><i class="fal fa-eye"></i> 45 Views</a>
+                                <a href="blog-details.html"><i class="fal fa-comments"></i> 12 Comments</a>
+                                <a href="blog-details.html"><i class="fal fa-calendar-alt"></i> 01 December, 2023</a>
+                            </div>
+                            <h3 class="blog-title"><a href="blog-details.html">From its medieval origins to the digital era, learn everything there is to know</a></h3>
+                            <p class="blog-text">Conveniently whiteboard team building architectures without sticky partnerships. Energistically redefine emerging paradigms after resource sucking bandwidth. Dramatically supply transparent expertise whereas market-driven testing procedures.</p>
+                            <a href="blog-details.html" class="link-btn">Read More <i class="far fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="vs-blog blog-single wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="blog-img">
+                            <a href="blog-details.html">
+                                <img src="./assets/assets/img/blog/blog-big-4.jpg" alt="BLog Img">
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=FCMrbA5FgZs" class="popup-video play-btn style-1"><i class="fas fa-play"></i></a>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <a href="blog-details.html"><i class="fal fa-eye"></i> 144 Views</a>
+                                <a href="blog-details.html"><i class="fal fa-comments"></i> 07 Comments</a>
+                                <a href="blog-details.html"><i class="fal fa-calendar-alt"></i> 14 March, 2023</a>
+                            </div>
+                            <h3 class="blog-title"><a href="blog-details.html">Latin derived from Cicero's 1st-century BC text De prevailing view assumed</a></h3>
+                            <p class="blog-text">Conveniently whiteboard team building architectures without sticky partnerships. Energistically redefine emerging paradigms after resource sucking bandwidth. Dramatically supply transparent expertise whereas market-driven testing procedures.</p>
+                            <a href="blog-details.html" class="link-btn">Read More <i class="far fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="vs-blog blog-single wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="blog-img">
+                            <a href="blog-details.html">
+                                <img src="./assets/assets/img/blog/blog-big-5.jpg" alt="BLog Img">
+                            </a>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <a href="blog-details.html"><i class="fal fa-eye"></i> 33 Views</a>
+                                <a href="blog-details.html"><i class="fal fa-comments"></i> 114 Comments</a>
+                                <a href="blog-details.html"><i class="fal fa-calendar-alt"></i> 03 Augest, 2023</a>
+                            </div>
+                            <h3 class="blog-title"><a href="blog-details.html">Creation timelines for the standard lorem ipsum passage vary, with some citing</a></h3>
+                            <p class="blog-text">Conveniently whiteboard team building architectures without sticky partnerships. Energistically redefine emerging paradigms after resource sucking bandwidth. Dramatically supply transparent expertise whereas market-driven testing procedures.</p>
+                            <a href="blog-details.html" class="link-btn">Read More <i class="far fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="vs-blog blog-single wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="blog-audio">
+                            <iframe title="Tell Me U Luv Me (with Trippie Redd) by Juice WRLD" width="751" height="200" src="https://w.soundcloud.com/player/?visual=true&amp;url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F830279092&amp;show_artwork=true&amp;maxwidth=751&amp;maxheight=1000&amp;dnt=1"></iframe>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <a href="blog-details.html"><i class="fal fa-eye"></i> 144 Views</a>
+                                <a href="blog-details.html"><i class="fal fa-comments"></i> 11 Comments</a>
+                                <a href="blog-details.html"><i class="fal fa-calendar-alt"></i> 15 March, 2023</a>
+                            </div>
+                            <h3 class="blog-title"><a href="blog-details.html">Letraset's dry-transfer sheets, and later entered the digital world via Aldus</a></h3>
+                            <p class="blog-text">Conveniently whiteboard team building architectures without sticky partnerships. Energistically redefine emerging paradigms after resource sucking bandwidth. Dramatically supply transparent expertise whereas market-driven testing procedures.</p>
+                            <a href="blog-details.html" class="link-btn">Read More <i class="far fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    Blog End -->
+                    <!-- Pagination -->
+                    <div class="vs-pagination mt-60 mb-30 mb-lg-0 wow fadeInUp" data-wow-delay="0.1s">
+                        <ul>
+                            <li>
+                                <a href="blog.html"><i class="fas fa-chevron-left"></i></a>
+                            </li>
+                            <li><a href="blog.html" class="active">1</a></li>
+                            <li><a href="blog.html">2</a></li>
+                            <li><a href="blog.html">3</a></li>
+                            <li><a href="blog.html">...</a></li>
+                            <li><a href="blog.html">10</a></li>
+                            <li>
+                                <a href="blog.html"><i class="fas fa-chevron-right"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- / Blog end -->
+                <!-- Sidebar -->
+                <div class="col-xl-4 col-lg-5">
+                    <aside class="sidebar-area">
+                        <div class="widget widget_search wow fadeInUp" data-wow-delay="0.1s">
+                            <h4 class="widget_title">Search</h4>
+                            <form class="search-form">
+                                <input type="text" placeholder="Search Here">
+                                <button type="submit"><i class="far fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="widget widget_categories wow fadeInUp" data-wow-delay="0.1s" >
+                            <h4 class="widget_title" >Categories</h4>
+                            <ul>
+                                <div   *ngFor="let cat of categoriesArticle">
+
+                                <li><a href="blog.html">{{cat.type}}</a> <span>10</span></li>
+                               </div>
+                            </ul>
+                        </div>
+                        <div class="widget wow fadeInUp" data-wow-delay="0.1s">
+                            <h4 class="widget_title">Popular Posts</h4>
+                            <div class="recent-post-wrap">
+                                <div class="recent-post">
+                                    <div class="media-img">
+                                        <a href="blog-details.html"><img src="./assets/assets/img/blog/thumb-1.jpg" alt="Blog Image"></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="post-title"><a href="blog-details.html">User’s Pepare Using Story Guide Yes</a></h4>
+                                        <div class="recent-post-meta"><a href="blog.html"><i class="fal fa-calendar-alt"></i> Dec 12, 2023</a></div>
+                                    </div>
+                                </div>
+                                <div class="recent-post">
+                                    <div class="media-img">
+                                        <a href="blog-details.html"><img src="./assets/assets/img/blog/thumb-2.jpg" alt="Blog Image"></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="post-title"><a href="blog-details.html">How to prepare child for examination</a></h4>
+                                        <div class="recent-post-meta"><a href="blog.html"><i class="fal fa-calendar-alt"></i> Dec 12, 2023</a></div>
+                                    </div>
+                                </div>
+                                <div class="recent-post">
+                                    <div class="media-img">
+                                        <a href="blog-details.html"><img src="./assets/assets/img/blog/thumb-3.jpg" alt="Blog Image"></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="post-title"><a href="blog-details.html">Imortance of childcare for your kids</a></h4>
+                                        <div class="recent-post-meta"><a href="blog.html"><i class="fal fa-calendar-alt"></i> Dec 12, 2023</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget widget_tag_cloud wow fadeInUp" data-wow-delay="0.1s">
+                            <h4 class="widget_title">Most Used Tags</h4>
+                            <div class="tagcloud">
+                                <a href="blog.html">Child</a>
+                                <a href="blog.html">Kids</a>
+                                <a href="blog.html">Online</a>
+                                <a href="blog.html">Education</a>
+                                <a href="blog.html">Childcare</a>
+                                <a href="blog.html">Care</a>
+                                <a href="blog.html">Class</a>
+                                <a href="blog.html">Exam</a>
+                            </div>
+                        </div>
+                        <div class="widget widget_banner wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="banner">
+                                <img class="w-100" src="./assets/assets/img/blog/widget-banner.jpg" alt="banner">
+                            </div>
+                            <div class="content">
+                                <span class="text-theme">Hurry Up</span>
+                                <h3 class="h3">Get 20% Off</h3>
+                            </div>
+                            <a href="contact.html" class="vs-btn wave-btn banner-btn">Appointment</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--======== / Blog Section ========-->

@@ -1,0 +1,26 @@
+.breadcumb-title {
+    animation: fadeInUp 1s ease forwards;
+    font-weight: bold;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustement des dimensions des composants */
+.service-box {
+    height: 100%; /* Ajustez la hauteur selon vos besoins */
+}
+
+.service-img img {
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+    height: 100%; /* Ajustez la hauteur selon vos besoins */
+    object-fit: cover;
+}

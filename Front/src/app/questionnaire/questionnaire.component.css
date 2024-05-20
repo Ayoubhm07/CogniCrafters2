@@ -1,0 +1,19 @@
+/* questionnaire.component.css */
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 30%;
+  transition: width 0.3s ease; /* Adding transition for smooth animation */
+}
+
+.main-content {
+  flex-grow: 1; /* Main content takes up the remaining space */
+  width: 70%;
+  transition: width 0.3s ease; /* Adding transition for smooth animation */
+}
+
+.closed ul {
+  display: none; /* Hide categories when sidebar is closed */
+}

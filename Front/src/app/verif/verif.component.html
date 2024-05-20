@@ -1,0 +1,227 @@
+<!--======== About Section ========-->
+<div class="breadcumb-wrapper" data-bg-src="./assets/assets/img/bg/breadcrumb-bg-1.jpg">
+    <div class="container">
+        <div class="breadcumb-content text-center">
+            <h1 class="breadcumb-title animated fadeInDown">Verify Your Account !</h1>
+            <p class="breadcumb-description animated fadeInUp">Welcome! This page is designed for psychiatrists to validate their accounts. Please upload the required documents to confirm your identity.</p>
+        </div>
+    </div>
+</div>
+<section class="process-section space-top space-bottom-shape2-plus">
+    <div class="container">
+        <div class="row mb-20 text-center justify-content-center">
+            <div class="col-xl-6 col-lg-7 col-md-8 col-sm-9">
+                <div class="title-area">
+                    <span class="sub-title">Our Process</span>
+                    <h2 class="sec-title">How We Manage Our Patients' Care</h2>
+                </div>
+            </div>
+        </div>
+        <div class="process-area">
+            <div class="row gy-60 justify-content-between">
+                <!-- Single Item -->
+                <div class="col-auto process-box wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="process-box-body">
+                        <span class="process-number">01</span>
+                        <div class="process-content">
+                            <div class="process-icon">
+                                <img src="./assets/assets/img/icon/process2-1.png" alt="icon">
+                            </div>
+                            <h5 class="process-name"><a href="service.html">Discover Available Services</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Item -->
+                <div class="col-auto process-box wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="process-box-body">
+                        <span class="process-number">02</span>
+                        <div class="process-content">
+                            <div class="process-icon">
+                                <img src="./assets/assets/img/icon/process2-2.png" alt="icon">
+                            </div>
+                            <h5 class="process-name"><a href="contact.html">Schedule an Appointment</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Item -->
+                <div class="col-auto process-box wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="process-box-body">
+                        <span class="process-number">03</span>
+                        <div class="process-content">
+                            <div class="process-icon">
+                                <img src="./assets/assets/img/icon/process2-3.png" alt="icon">
+                            </div>
+                            <h5 class="process-name"><a href="classes.html">Begin Your Treatment Journey</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Item -->
+                <div class="col-auto process-box wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="process-box-body">
+                        <span class="process-number">04</span>
+                        <div class="process-content">
+                            <div class="process-icon">
+                                <img src="./assets/assets/img/icon/process2-4.png" alt="icon">
+                            </div>
+                            <h5 class="process-name"><a href="classes.html">Achieve Mental Wellness</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="process-line"><img src="./assets/assets/img/shape/dashed-line-1.png" alt="shape"></div>
+        </div>
+    </div>
+</section>
+
+<section class="validation-section">
+ 
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <img src="./assets/assets/img/security.jpg" alt="Security Image" class="flyer-image img-fluid">
+            </div> 
+            <div class="col-lg-8">
+              
+                <div class="validation-form bg-light p-4 rounded shadow-lg animated fadeInUp">
+                    <h2 class="validation-title text-center mb-4">Account Validation</h2>
+                    <form class="needs-validation" novalidate (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="cabinetAddress">Cabinet Address</label>
+                            <input type="text" class="form-control" id="cabinetAddress" placeholder="Enter your cabinet address" required>
+                            <div class="invalid-feedback">Please provide your cabinet address.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cabinetPhone">Cabinet Phone Number</label>
+                            <input type="tel" class="form-control" id="cabinetPhone" placeholder="Enter your cabinet phone number" required>
+                            <div class="invalid-feedback">Please provide your cabinet phone number.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="psychiatristImage">Psychiatrist Image</label>
+                            <input type="file" class="form-control-file" id="psychiatristImage" accept="image/*" required #imageInput>
+                            <div class="invalid-feedback">Please upload your image.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cin">CIN</label>
+                            <button type="button" class="btn btn-purple" (click)="showNotification()">Upload Identification Image</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="diplomaFile">Diploma File (PDF)</label>
+                            <input type="file" class="form-control-file" id="diplomaFile" accept=".pdf" required>
+                            <div class="invalid-feedback">Please upload your diploma (PDF).</div>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Submit</button>
+                    </form>
+                    <div id="cameraContainer" class="mt-4 fade-in">
+                        <video #videoElement width="100%" height="auto" autoplay></video>
+                        <button type="button" class="btn btn-primary mt-2" (click)="takePhoto()">Take Photo</button>
+                        <button type="button" class="btn btn-secondary mt-2" (click)="cancel()">Cancel</button>
+                    </div>
+               
+                </div>
+           
+            </div>
+         
+        </div>
+    </div>
+</section>
+
+<section class="classes-section bg-smoke-two space-top space-extra-bottom">
+    <div class="container">
+        <div class="row mb-20 text-center justify-content-center">
+            <div class="col-xl-6 col-lg-7 col-md-8 col-sm-9">
+                <div class="title-area">
+                    <span class="sub-title">Join Our Psychiatrists Team!</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="class-box">
+                    <div class="class-content">
+                        <div class="class-profile">
+                            <div class="profile">
+                                <div class="avatar">
+                                    <img src="../../assets/ayoub.jpg" alt="author">
+                                </div>
+                                <div class="info">
+                                    <h3 class="author-name text-title"><a href="team-details.html">Maher Karoui</a></h3>
+                                    <span class="author-desig">Psychiatrist</span>
+                                </div>
+                            </div>
+                            <span class="class-fee">$29.99</span>
+                        </div>
+                        <ul class="class-info">
+                            <li>
+                                <p>Adresse</p>
+                                <span>Medenine</span>
+                            </li>
+                            <li>
+                                <p>Mobile</p>
+                                <span>44251447</span>
+                            </li>
+                        </ul>
+                        <a href="class-details.html" class="vs-btn style-1">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="class-box">
+                    <div class="class-content">
+                        <div class="class-profile">
+                            <div class="profile">
+                                <div class="avatar">
+                                    <img src="../../assets/fyras.jpg" alt="author">
+                                </div>
+                                <div class="info">
+                                    <h3 class="author-name text-title"><a href="team-details.html">Lachheb</a></h3>
+                                    <span class="author-desig">Psychiatrist</span>
+                                </div>
+                            </div>
+                            <span class="class-fee">$30</span>
+                        </div>
+                        <ul class="class-info">
+                            <li>
+                                <p>Adresse</p>
+                                <span>Ariana</span>
+                            </li>
+                            <li>
+                                <p>Mobile</p>
+                                <span>98813611</span>
+                            </li>
+                        </ul>
+                        <a href="class-details.html" class="vs-btn style-1">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="class-box">
+                    <div class="class-content">
+                        <div class="class-profile">
+                            <div class="profile">
+                                <div class="avatar">
+                                    <img src="./assets/assets/img/blog/author-2.jpg" alt="author">
+                                </div>
+                                <div class="info">
+                                    <h3 class="author-name text-title"><a href="team-details.html">Chaima Eljed</a></h3>
+                                    <span class="author-desig">Psychiatrist</span>
+                                </div>
+                            </div>
+                            <span class="class-fee">$35</span>
+                        </div>
+                        <ul class="class-info">
+                            <li>
+                                <p>Adresse</p>
+                                <span>Tunis</span>
+                            </li>
+                            <li>
+                                <p>Mobile</p>
+                                <span>25703996</span>
+                            </li>
+                        </ul>
+                        <a href="class-details.html" class="vs-btn style-1">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,67 @@
+.stars a.selected {
+  color: yellow; /* Changez la couleur de la star sélectionnée selon vos besoins */
+}
+/* .star {
+  color: gray;
+  text-decoration: none;
+} */
+
+.selected {
+  color: gold;
+}
+.rating {
+  font-size: 24px;
+}
+
+.star {
+  cursor: pointer;
+  color: #ccc;
+}
+
+.star.filled {
+  color: #ffca28;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 78px;
+  height: calc(27px*0.866 + 8px);
+  background:#FD135A;
+  --c1:conic-gradient(from 150deg at top   ,#000 60deg,#0000 0);
+  --c2:conic-gradient(from -30deg at bottom,#000 60deg,#0000 0);
+  --s:27px calc(27px*0.866);
+  clip-path: polygon(18.1px 0,calc(100% - 18.1px) 0,100% 100%,0 100%);
+  -webkit-mask:
+    var(--c1) left  8px top 50%,
+    var(--c2) center,
+    var(--c1) right 8px top 50%,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+          mask-composite:exclude;
+  -webkit-mask-repeat:no-repeat;
+  animation: l3 0.5s infinite; /* Modifier la durée de l'animation à 2 secondes */
+  
+
+}
+@keyframes l3 {
+  0%    {-webkit-mask-size:0    0  ,0    0  ,0    0  ,auto}
+  16.67%{-webkit-mask-size:var(--s),0    0  ,0    0  ,auto}
+  33.33%{-webkit-mask-size:var(--s),var(--s),0    0  ,auto}
+  50%   {-webkit-mask-size:var(--s),var(--s),var(--s),auto}
+  66.67%{-webkit-mask-size:0    0  ,var(--s),var(--s),auto}
+  83.33%{-webkit-mask-size:0    0  ,0    0  ,var(--s),auto}
+  100%  {-webkit-mask-size:0    0  ,0    0  ,0    0  ,auto}
+}
+.spinner-border {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border-width: 0.25em;
+  border-color: #fd135a transparent transparent transparent; /* Couleur du spinner */
+  border-radius: 50%;
+  animation: spin 1s linear infinite; /* Animation de rotation */
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}

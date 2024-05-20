@@ -1,0 +1,231 @@
+
+
+    <!--======== About Section ========-->
+    <div class="breadcumb-wrapper" data-bg-src="C:/Users/saada/OneDrive/Bureau/CogniCrafters_User-templatefront/project/src/assets/assets/img/bg/breadcrumb-bg-1.jpg" >
+      <div class="container">
+          <div class="breadcumb-content">
+              <h1 class="breadcumb-title">Shop Now</h1>
+              <ul class="breadcumb-menu">
+                  <li><a href="index.html">Home</a></li>
+                  <li class="active">HomeCart</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+  <!-- <a class="vs-btn" (click)="detectLocation()">Convertir</a> -->
+
+  <!--======== / About Section ========-->
+  <!--======== Shop Section ========-->
+  <section class="vs-product-wrapper space-page">
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+
+          </div>
+      </div>
+  </div>
+    <div class="container">
+        <div class="vs-sort-bar mb-40" >
+            <div class="row gy-20 align-items-center">
+                <div class="col-xl-3 col-md-4">
+                    <div class="product-search">
+                        <div class="widget widget_search">
+                            <form class="search-form">
+                              <input type="text" placeholder="Search Here" name="search" [(ngModel)]="searchText" (ngModelChange)="onSearchChange()">
+
+                                <button type="submit"><i class="far fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-auto">
+                    <span class="show-product">Showing 1–9 of 12 results</span>
+                </div>
+                <div class="col-sm-auto ms-auto">
+                    <select class="form-select sortby" name="sortby" id="sortby">
+                        <option>Sort by Latest</option>
+                        <option>Sort by Oldest</option>
+                        <option>Sort by Ascending</option>
+                        <option>Sort by Descending</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row gy-40 flex-column-reverse flex-lg-row">
+          <div class="col-xl-3 col-lg-4">
+              <div class="sidebar-area shop-sidebar">
+                  <div class="widget widget_price_filter">
+                      <h4 class="widget_title">Price Filter</h4>
+                      <div class="price_slider_wrapper">
+                          <div class="price_label">
+                              Price: <span class="from">$0</span> — <span class="to">$70</span>
+                          </div>
+                          <div class="price_slider"></div>
+                          <button type="submit" class="button">Filter</button>
+                      </div>
+                  </div>
+
+                <!-- widget_categories -->
+<div class="widget widget_categories">
+  <h4 class="widget_title">Categories</h4>
+  <ul>
+    <li *ngFor="let category of categories">
+      <a  (click)="selectCategory(category._id)">{{ category.categoryName }}</a>
+      <span>({{ category.productsCount }})</span>
+    </li>
+  </ul>
+</div>
+
+
+<div class="widget widget_top_rated_products">
+  <h4 class="widget_title">Latest Products</h4>
+  <ul class="product_list_widget">
+      <li class="recent-post" *ngFor="let product of latestProducts">
+          <div class="media-img">
+              <a href="shop-details.html">
+                  <img [src]="'http://localhost:8185/'+ product.image" alt="thumb" width="80" height="80">
+              </a>
+          </div>
+          <div class="media-body">
+              <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
+                  <span>Rated <strong class="rating">5.00</strong> out of 5</span>
+              </div>
+              <h4 class="recent-post-title h5"><a href="shop-details.html">{{ product.name }}</a></h4>
+              <span class="price"><del>{{ product.price }}</del><strong>{{ product.price }}</strong></span>
+          </div>
+      </li>
+  </ul>
+</div>
+
+                    <div class="widget widget_tag_cloud wow fadeInUp" data-wow-delay="0.1s">
+                        <h4 class="widget_title">Tags</h4>
+                        <div class="tagcloud">
+                            <a href="shop.html">Bunny</a>
+                            <a href="shop.html">Doll</a>
+                            <a href="shop.html">Dogy</a>
+                            <a href="shop.html">Cars</a>
+                            <a href="shop.html">Puppet</a>
+                            <a href="shop.html">Toys</a>
+                            <a href="shop.html">Wooden</a>
+                            <a href="shop.html">Learning</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-9 col-lg-8">
+                <div class="row gy-30">
+
+                    <!-- Single Class -->
+                    <div class="col-xl-4 col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"  *ngFor="let product of product">
+                        <div class="vs-product-box">
+                            <div class="product-img">
+                                <!-- Utilisez la propriété du produit pour afficher l'image -->
+                      <a [routerLink]="'/product-details/' + product._id">
+                        <img [src]="'http://localhost:8185/'+ product.image" [alt]="product.name" class="w-100">
+                    </a>
+                                <div class="actions">
+                                    <a class="vs-btn" [routerLink] = "'/cart'" routerLinkActive="act">Add To Cart</a>
+
+                                </div>
+                                <div class="product-tag">Sale</div>
+                            </div>
+                            <div class="product-content">
+                                <div class="rating-wrap">
+                                    <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
+                                        <span>Rated <strong class="rating">5.00</strong> out of 5</span>
+                                    </div>
+                                </div>
+                                <h2 class="product-title h4"><a href="shop-details.html">{{product.name}}</a></h2>
+
+                                <li>
+
+                                  <span class="price">{{ product.price }}$</span>
+                                  <p>Prix: {{ product.price | currency:'EUR' }}</p>
+                                  <!-- <p>Devise: {{ detectedRegion }}</p> -->
+                                  <div *ngFor="let product of product2">
+                                    <h3>{{ product.name }}</h3>
+                                    <p>Converted Price: {{ product.price }}</p>
+                                  </div>
+
+                                </li>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                      <h2 class="center">Les avis de nos clients</h2>
+
+                      <div class="comment-container">
+                        <ng-container *ngFor="let prediction of predictions">
+                          <div class="comment-item">
+                            <p class="comment">{{ prediction.review }}</p>
+                            <div class="sentiment" [ngClass]="{
+                              'positive': prediction.predicted_sentiment === 'positif',
+                              'negative': prediction.predicted_sentiment === 'négatif',
+                              'neutre': prediction.predicted_sentiment === 'neutre'
+                            }">
+                              <span>{{ prediction.predicted_sentiment === 'positif' ? '😊' : (prediction.predicted_sentiment === 'négatif' ? '😞' : '😐') }}</span>
+                              <p>{{ prediction.predicted_sentiment }}</p>
+                            </div>
+                          </div>
+                        </ng-container>
+                      </div>
+
+
+
+
+                    </div>
+                </div>
+                <!-- Pagination -->
+ <!-- Pagination -->
+<div class="vs-pagination mt-60">
+  <ul>
+      <li>
+          <a (click)="setCurrentPage(currentPage - 1)" [class.disabled-link]="currentPage === 1">
+              <i class="fas fa-chevron-left"></i>
+          </a>
+      </li>
+      <li *ngFor="let page of totalPagesArray()">
+          <a (click)="setCurrentPage(page)" [class.active]="currentPage === page">{{ page }}</a>
+      </li>
+      <li>
+          <a (click)="setCurrentPage(currentPage + 1)" [class.disabled-link]="currentPage === totalPages">
+              <i class="fas fa-chevron-right"></i>
+          </a>
+      </li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+            </div>
+            <div id="map" style="height: 400px;"></div>
+
+        </div>
+
+    </div>
+
+</section>
+<script src="https://maps.googleapis.com/maps/api/js?AIzaSyBi3t8TyZxEoZ-1-sRGRZLJuczImaQtyUw"></script>
+<!-- Slick Slider -->
+<script src="../../assets/assets/js/slick.min.js"></script>
+<!-- Isotope Filter -->
+<script src="../../assets/assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="../../assets/assets/js/isotope.pkgd.min.js"></script>
+<!-- Range Slider -->
+<script src="../../assets/assets/js/jquery-ui.min.js"></script>
+ <!-- WOW JS (Animation JS) -->
+ <script src="../../assets/assets/js/wow.min.js"></script>
+ <!-- Isotope Filter -->
+ <script src="../../assets/assets/js/imagesloaded.pkgd.min.js"></script>
+ <script src="../../assets/assets/js/isotope.pkgd.min.js"></script>

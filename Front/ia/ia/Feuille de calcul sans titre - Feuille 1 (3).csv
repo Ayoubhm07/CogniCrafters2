@@ -1,0 +1,30 @@
+review,labelisation
+Ce produit est excellent !,positif
+J'aime beaucoup ce produit.,positif
+Je ne suis pas satisfait de ce produit.,négatif
+Ce produit est moyen.,neutre
+c'est trop bien!,positif
+oui c'est vrai ils aiment les jeux de lumiere,positif
+c'est un bon produit il a aidé mon fils à s integrer,positif
+ce produit est très utile pour les enfants et plus spécialement les nefnats autiste,positif
+ce produit est null,négatif
+ce produit est inutile,négatif
+"Ce produit fonctionne bien, mais je m'attendais à mieux pour le prix.",négatif
+"La livraison a été plus rapide que prévu, ce qui a été une agréable surprise.",positif
+"Le service clientèle n'était pas à la hauteur, mais le produit lui-même est excellent.",Neutre
+"Je n'ai pas pu trouver exactement ce que je cherchais, mais j'ai découvert un produit similaire qui fonctionne tout aussi bien",positif
+"La qualité du produit est indéniable, mais le prix est un peu élevé à mon goût.",Neutre
+"Le produit a été bien emballé et livré rapidement, ce qui est toujours un bon point.",positif
+"L'interface utilisateur est conviviale, mais quelques fonctionnalités manquent pour en faire un produit vraiment complet.",positif
+"Le produit répond à mes besoins de base, mais j'aurais aimé avoir plus d'options de personnalisation.",positif
+"Le produit est génial, mais il pourrait être encore meilleur avec quelques améliorations mineures.",positif
+"Ce produit est de très mauvaise qualité. Il s'est cassé après seulement quelques jours d'utilisation.""",négatif
+Je suis très déçu par cet achat. Le produit ne correspond pas du tout à sa description.,négatif
+Évitez ce produit à tout prix. C'est une perte d'argent.,négatif
+Le produit était endommagé à l'arrivée et le processus de retour a été un cauchemar. Je ne recommanderais pas cette entreprise.,négatif
+Les fonctionnalités de ce produit sont très limitées. Je m'attendais à beaucoup mieux pour le prix que j'ai payé.,négatif
+La livraison a été très en retard et le suivi du colis était inexistant. Très mauvaise expérience globale.,négatif
+J'ai reçu le mauvais article et il a fallu des semaines pour résoudre le problème. Très décevant.,négatif
+Le produit était sale et semblait déjà utilisé. C'est inacceptable pour un produit neuf.,négatif
+La qualité de fabrication est médiocre. Je ne pense pas que ce produit va durer longtemps.,négatif
+ce produit est médiocre,négatif

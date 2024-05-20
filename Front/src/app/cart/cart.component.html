@@ -1,0 +1,149 @@
+<!--======== Cart Section ========-->
+<div class="vs-cart-wrapper space-page">
+  <div class="container">
+    <div class="woocommerce-notices-wrapper">
+      <div class="woocommerce-message">Shipping costs updated.</div>
+    </div>
+    <div >
+      <form action="#" class="woocommerce-cart-form">
+        <table class="cart_table">
+          <thead>
+            <tr>
+              <th class="cart-col-image">Image</th>
+              <th class="cart-col-productname">Product Name</th>
+              <th class="cart-col-price">Price</th>
+              <th class="cart-col-quantity">Quantity</th>
+              <th class="cart-col-total">Total</th>
+              <th class="cart-col-remove">Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let item of panier; let i = index">
+              <tr >
+                <td data-title="Product">
+                  <a class="cart-productimage" href="shop-details.html"><img width="80" height="80" img [src]="'http://localhost:8089/' + item.produit.image" [alt]="item.produit.name"></a>
+                </td>
+                <td data-title="Name">
+                  <a class="cart-productname" href="shop-details.html">{{ item.produit.name }}</a>
+                </td>
+                <td data-title="Price">
+                  <span class="amount"><bdi><span>$</span>{{ item.produit.price }}</bdi></span>
+                </td>
+                <td data-title="Quantity">
+                  <div class="quantity">
+                    <input type="number" class="qty-input" [name]="item.produit._id" [(ngModel)]="item.quantite" min="1" max="99">
+                    <button class="quantity-minus qut-btn" (click)="decrementQuantity(item)"><i class="far fa-minus"></i></button>
+                    <button class="quantity-plus qut-btn" (click)="incrementQuantity(item)"><i class="far fa-plus"></i></button>
+                  </div>
+                </td>
+
+
+                <td data-title="Total">
+                  <span class="amount"><bdi><span>$</span>{{ item.produit && item.produit.price ? item.produit.price * item.quantite : 0 }}</bdi></span>
+                </td>
+
+
+                <td data-title="Remove">
+                  <a href="/cart" class="remove" (click)="removeItem(i)"><i class="fal fa-trash-alt"></i></a>
+
+                </td>
+              </tr>
+
+            </ng-container>
+            <tr>
+              <td colspan="6" class="actions">
+                  <div class="vs-cart-coupon">
+                      <input type="text" class="form-control" placeholder="Coupon Code...">
+                      <button type="submit" class="vs-btn">Apply Coupon</button>
+                  </div>
+                  <button type="submit" class="vs-btn">Update cart</button>
+                  <a href="shop.html" class="vs-btn">Continue Shopping</a>
+              </td>
+          </tr>
+          </tbody>
+        </table>
+
+      </form>
+      <div class="row justify-content-end">
+        <div class="col-md-8 col-lg-7 col-xl-6">
+          <h2 class="h4 summary-title">Cart Totals</h2>
+          <table class="cart_totals">
+            <tbody>
+              <tr>
+                <td>Cart Subtotal</td>
+                <td data-title="Cart Subtotal">
+                  <bdi><span>$</span>{{ prixTotal }}</bdi>
+                </td>
+              </tr>
+              <tr class="shipping">
+                <th>Shipping and Handling</th>
+                <td data-title="Shipping and Handling">
+                  <ul class="woocommerce-shipping-methods list-unstyled">
+                    <li>
+                      <input type="radio" id="free_shipping" name="shipping_method" class="shipping_method" value="free_shipping" [(ngModel)]="selectedShippingMethod" (change)="onShippingMethodChange($event)">
+                      <label for="free_shipping">Free shipping</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="flat_rate" name="shipping_method" class="shipping_method" value="flat_rate" [(ngModel)]="selectedShippingMethod" (change)="onShippingMethodChange($event)" checked>
+                      <label for="flat_rate">Flat rate</label>
+                    </li>
+                  </ul>
+
+                  <p class="woocommerce-shipping-destination">
+                    Shipping options will be updated during checkout.
+                  </p>
+                  <form action="#" method="post">
+                    <a href="#" class="shipping-calculator-button">Change address</a>
+                    <div class="shipping-calculator-form">
+                      <p class="form-row">
+                        <select class="form-select">
+                          <option value="AR">Argentina</option>
+                          <option value="AM">Armenia</option>
+                          <option value="BD" selected="selected">Bangladesh</option>
+                        </select>
+                      </p>
+                      <p>
+                        <select class="form-select">
+                          <option value="">Select an option…</option>
+                          <option value="BD-05">Bagerhat</option>
+                          <option value="BD-01">Bandarban</option>
+                          <option value="BD-02">Barguna</option>
+                          <option value="BD-06">Barishal</option>
+                        </select>
+                      </p>
+                      <p class="form-row">
+                        <input type="text" class="form-control" placeholder="Town / City">
+                      </p>
+                      <p class="form-row">
+                        <input type="text" class="form-control" placeholder="Postcode / ZIP">
+                      </p>
+                      <p>
+                        <button class="vs-btn">Update</button>
+                      </p>
+                    </div>
+                  </form>
+                </td>
+              </tr>
+
+            </tbody>
+            <tfoot>
+              <tr class="order-total">
+                <td>Order Total</td>
+                <td data-title="Total">
+                  <strong><span class="amount"><bdi><span>$</span>{{ prixTotal }}</bdi></span></strong>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+          <div class="wc-proceed-to-checkout">
+            <!-- <a class="vs-btn" (click)="mettreAJourCommande(commandeId, commandeModifiee)">Proceed to checkout</a> -->
+            <!-- <a class="vs-btn" (click)="pay(prixTotal)">Proceed to checkout</a> -->
+             <a class="vs-btn" routerLink="/checkout" routerLinkActive="active">Proceed to checkout</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--======== / Cart Section ========-->

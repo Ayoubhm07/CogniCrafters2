@@ -1,0 +1,28 @@
+<!-- <form (submit)="ajouterCommentaire()">
+    <textarea [(ngModel)]="commentaire.contenu" name="contenu" required></textarea>
+    <button type="submit">Ajouter un commentaire</button>
+  </form> -->
+  <div class="vs-comment-form wow fadeInUp" data-wow-delay="0.1s">
+    <div class="form-title">
+        <h3 class="blog-inner-title">Leave a Comment</h3>
+        <p class="form-text">Your email address will not be published. Required fields are marked *</p>
+    </div>
+    
+    <!-- <div class="row">
+        <div class="col-12 form-group" (submit)="ajouterCommentaire()">
+            <textarea  [(ngModel)]="commentaire.contenu" name="contenu" required placeholder="Write a Comment" class="form-control style2"></textarea>
+            <i class="far fa-pencil-alt"></i>
+        </div>
+       
+        <div class="col-12 form-group">
+            <button  type="submit" class="vs-btn">
+                <i class="fal fa-paper-plane" type="submit"></i> Post Comment</button>
+        </div>
+    </div> -->
+    <form class="col-12 form-group" (submit)="ajouterCommentaire()">
+        <textarea [(ngModel)]="commentaire.contenu" name="contenu" required   class="form-control style2"></textarea>
+        <i class="far fa-pencil-alt"></i>
+
+        <button class="vs-btn" type="submit">Ajouter un commentaire</button>
+      </form> 
+</div>

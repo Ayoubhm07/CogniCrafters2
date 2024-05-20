@@ -1,0 +1,182 @@
+
+ <!--======== Shop Details Section ========-->
+ <section class="vs-product-wrapper product-details space-page">
+  <div class="container">
+
+      <div class="row gx-40 mb-80">
+          <div class="col-lg-5 mb-30 mb-lg-0">
+              <div class="product-big-img">
+                  <div class="img-fullsize"><img [src]="'http://localhost:8185/' +product?.image" [alt]="product?.name" class="img-fluid"></div>
+                  <a href="wishlist.html" class="add_to_wishlist"><i class="far fa-heart"></i></a>
+              </div>
+          </div>
+          <div class="col-lg-7 align-self-center">
+              <div class="product-about" >
+
+                  <div class="woocommerce-product-rating">
+                      <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
+                          <span>Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">1</span> customer rating</span>
+                      </div>
+                      <a href="shop-details.html" class="woocommerce-review-link">(<span class="count">3</span> customer reviews)</a>
+                  </div>
+                  <h2 class="product-title">{{ product?.name }}</h2>
+                  <p class="price">{{product?.currency}}{{ product?.price }}</p>
+                  <div *ngIf="isLoading" class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                  <p  class="price" *ngIf="!isLoading">{{ conversionResult }}</p>
+                  <p>{{ product?.description }}</p>
+                  <div class="actions">
+                    <span>Quantity</span>
+                    <div class="quantity">
+                      <button class="quantity-minus qut-btn" (click)="decrementQuantity()"><i class="fal fa-minus"></i></button>
+                      <input type="number" class="qty-input" [(ngModel)]="quantity" min="1" max="99">
+                      <button class="quantity-plus qut-btn" (click)="incrementQuantity()"><i class="fal fa-plus"></i></button>
+
+                    </div>
+                    <a routerLink="/cart" routerLinkActive="Active" (click)="ajouterAuPanier(product?._id)" class="vs-btn wave-btn">Add To Cart</a>
+                  </div>
+
+                <!-- Afficher la quantité estimée -->
+                <!-- <div *ngIf="commande && commande.quantiteAcheteParProduit">
+                    <p>Quantité estimée : {{ commande.quantiteAcheteParProduit[product?._id] }}</p>
+                </div> -->
+                  <div class="product_meta">
+                      <span>SKU: <span class="sku">{{ product?.sku }}</span></span>
+                      <span>Category: <a href="shop.html">{{ product?.categories }}</a></span>
+                      <span>Tags: <a href="shop.html">{{ product?.tags }}</a><a href="shop.html">Boys</a><a href="shop.html">Children</a></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <ul class="nav product-tab-style1 mb-30" id="productTab" role="tablist">
+          <li class="nav-item" role="presentation"><a class="nav-link active" id="tab-description" data-bs-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" id="tab-additional" data-bs-toggle="tab" href="#additional" role="tab" aria-controls="additional" aria-selected="false">Additional Information</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" id="tab-reviews" data-bs-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Review (03)</a></li>
+      </ul>
+      <div class="tab-content" id="productTabContent">
+          <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="tab-description">
+              <p>{{ product?.description }}</p>
+
+              <div class="check-list woocommerce style-2">
+                  <ul>
+                      <li>{{ product?.description }}</li>
+
+                  </ul>
+              </div>
+              <p>{{ product?.description }}</p>
+          </div>
+          <div class="tab-pane fade" id="additional" role="tabpanel" aria-labelledby="tab-additional">
+              <table class="woocommerce-table">
+                  <tr>
+                      <th>Brand</th>
+                      <td>Jakuna</td>
+                  </tr>
+                  <tr>
+                      <th>Color</th>
+                      <td>Yellow</td>
+                  </tr>
+                  <tr>
+                      <th>Weight</th>
+                      <td>400 gm</td>
+                  </tr>
+                  <tr>
+                      <th>Battery</th>
+                      <td>Lithium</td>
+                  </tr>
+                  <tr>
+                      <th>Material</th>
+                      <td>Wood</td>
+                  </tr>
+              </table>
+          </div>
+          <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="tab-reviews">
+              <!-- Comment Start -->
+              <div class="vs-comment-wrap">
+                  <ul class="comment-list">
+                      <li class="vs-comment">
+                          <div class="vs-post-comment">
+                              <div class="comment-avater"><img src="assets/img/blog/author-2.jpg" alt="Comment Author"></div>
+                              <div class="comment-content"div *ngFor="let review of reviews">
+                                  <span class="commented-on">22 April, 2023</span>
+                                  <p class="text">{{ review.comment }}</p>
+                                  <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
+                                      <span>Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">1</span> customer rating</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+              <!-- Comment Form -->
+              <div class="vs-comment-form">
+                  <div class="form-title mb-30">
+                    <h3 class="blog-inner-title">Add a review</h3>
+                    <div class="form-group rating-select d-flex align-items-center">
+                      <label>Your Rating</label>
+
+                      <div class="rating">
+                        <span class="star" (click)="setRating(1)" [ngClass]="{'filled': rating >= 1}">&#9733;</span>
+                        <span class="star" (click)="setRating(2)" [ngClass]="{'filled': rating >= 2}">&#9733;</span>
+                        <span class="star" (click)="setRating(3)" [ngClass]="{'filled': rating >= 3}">&#9733;</span>
+                        <span class="star" (click)="setRating(4)" [ngClass]="{'filled': rating >= 4}">&#9733;</span>
+                        <span class="star" (click)="setRating(5)" [ngClass]="{'filled': rating >= 5}">&#9733;</span>
+                      </div>
+
+
+
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col-12 form-group">
+                      <textarea [(ngModel)]="review.comment" placeholder="Write a Comment" id="commentForm" class="form-control style2"></textarea>
+                      <i class="far fa-pencil-alt"></i>
+                    </div>
+                    <div class="col-12 form-group">
+                      <button class="vs-btn" (click)="onSubmit(product?._id, review)">Post Review</button>
+                    </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+      <div class="related-products space-top">
+        <div class="title-area text-center wow fadeInUp" data-wow-delay="0.1s">
+            <span class="sub-title">Some Others Product</span>
+            <h2 class="sec-title">Related products</h2>
+        </div>
+        <div class="row vs-carousel" id="productSlide" data-slide-show="4" data-lg-slide-show="3" data-sm-slide-show="2" data-xs-slide-show="1" data-arrows="true">
+            <div *ngFor="let product of associatedProducts" class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="vs-product-box">
+                    <div class="product-img">
+
+                        <a [routerLink]="'/product-details/' + product._id" routerLinkActive="Active">
+                          <img [src]="'http://localhost:8185/' + product.image" [alt]="product.name" class="w-100">
+                      </a>
+                        <div class="actions">
+                            <a  routerLink="/cart" routerLinkActive="Active"(click)="ajouterAuPanier(product?._id)" class="vs-btn" >Add To Cart</a>
+
+                        </div>
+                        <div *ngIf="product.discount" class="product-tag">Sale</div>
+                    </div>
+                    <div class="product-content">
+                        <div class="rating-wrap">
+                            <div class="star-rating" role="img" aria-label="Ratedout of 5">
+                                <span>Rated <strong class="rating">{{product.rating}}</strong> out of 5</span>
+                            </div>
+                        </div>
+                        <h2 class="product-title h4"><a [routerLink]="'/product-details/' + product._id">{{product.name}}</a></h2>
+                        <span *ngIf="product.discount" class="price"><del>{{product.price}}</del> {{product.discount}}</span>
+                        <span *ngIf="!product.discount" class="price">{{product.price}}$</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+  </div>
+
+</section>

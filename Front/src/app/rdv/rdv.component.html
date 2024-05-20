@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-lg-4 col-md-6 wow fadeInUp" *ngFor="let psy of psychologues">
+      <div class="class-box">
+        <div class="class-profile">
+          <div class="profile">
+            <div class="avator">
+              <img src="./assets/assets/img/blog/author-1.jpg" alt="author">
+            </div>
+            <div class="info">
+              <h3 class="author-name text-title"><a href="team-details.html">{{ psy.firstName }} {{ psy.lastName }}</a></h3>
+              <span class="author-desig">{{ psy.attributes.phone[0] }}</span>
+            </div>
+          </div>
+          <span class="class-fee">{{ psy.email }}</span>
+        </div>
+        <ul class="class-info">
+          <li>
+            <p>Username:</p>
+            <span>{{ psy.username }}</span>
+          </li>
+          <li>
+            <p>Adresse:</p>
+            <span>{{ psy.attributes.adresse[0] }}</span>
+          </li>
+        </ul>
+        <!-- Vous pouvez ajouter d'autres détails ici -->
+        <a [routerLink]="['/cal', psy.id]" routerLinkActive="active" class="vs-btn style-1">Prendre rendez-vous</a>
+      </div>
+    </div>
+  </div>
+  

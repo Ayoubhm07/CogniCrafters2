@@ -1,0 +1,173 @@
+.product-img img {
+  width: 100%; /* Définissez la largeur de l'image à 100% pour qu'elle remplisse entièrement son conteneur */
+  height: auto; /* Assurez-vous que la hauteur s'ajuste automatiquement pour conserver les proportions de l'image */
+}
+.disabled-link {
+  pointer-events: none; /* Désactive les événements de pointeur */
+  opacity: 0.5; /* Réduit l'opacité pour indiquer qu'ils sont inactifs */
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 78px;
+  height: calc(27px*0.866 + 8px);
+  background:#FD135A;
+  --c1:conic-gradient(from 150deg at top   ,#000 60deg,#0000 0);
+  --c2:conic-gradient(from -30deg at bottom,#000 60deg,#0000 0);
+  --s:27px calc(27px*0.866);
+  clip-path: polygon(18.1px 0,calc(100% - 18.1px) 0,100% 100%,0 100%);
+  -webkit-mask:
+    var(--c1) left  8px top 50%,
+    var(--c2) center,
+    var(--c1) right 8px top 50%,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+          mask-composite:exclude;
+  -webkit-mask-repeat:no-repeat;
+  animation: l3 1.5s infinite;
+}
+@keyframes l3 {
+  0%    {-webkit-mask-size:0    0  ,0    0  ,0    0  ,auto}
+  16.67%{-webkit-mask-size:var(--s),0    0  ,0    0  ,auto}
+  33.33%{-webkit-mask-size:var(--s),var(--s),0    0  ,auto}
+  50%   {-webkit-mask-size:var(--s),var(--s),var(--s),auto}
+  66.67%{-webkit-mask-size:0    0  ,var(--s),var(--s),auto}
+  83.33%{-webkit-mask-size:0    0  ,0    0  ,var(--s),auto}
+  100%  {-webkit-mask-size:0    0  ,0    0  ,0    0  ,auto}
+}
+/* Stylisation du titre du dialogue avec une couleur de fond et de texte personnalisée */
+.alert-dialog-title {
+  background-color: #ffcc00;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Stylisation du contenu du dialogue avec une bordure et un remplissage personnalisés */
+.alert-dialog-content {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+/* Stylisation des boutons du dialogue avec une couleur de fond et de texte personnalisée */
+.alert-dialog-button {
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.alert-dialog-button:hover {
+  background-color: #ffdd33;
+}
+agm-map {
+  height: 300px;
+}
+/* styles.css */
+
+.prediction {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background-color: #fff;
+}
+
+.comment {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.sentiment {
+  display: flex;
+  align-items: center;
+}
+
+.sentiment span {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.positive {
+  color: #1abc9c; /* couleur pour les sentiments positifs */
+}
+
+.negative {
+  color: #e74c3c; /* couleur pour les sentiments négatifs */
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blinking {
+  animation: blink 1s infinite;
+}
+.comment-container {
+  width: 100%;
+  overflow: hidden; /* Masquer les commentaires qui dépassent */
+}
+
+.comment-item {
+  display: inline-block; /* Permet aux commentaires d'être affichés côte à côte */
+  white-space: nowrap; /* Empêcher le retour à la ligne */
+  margin-right: 20px; /* Espacement entre chaque commentaire */
+}
+
+/* Animation pour le défilement horizontal */
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.comment-item {
+  animation: scroll 10s linear infinite; /* Défilement horizontal infini */
+}
+.positive {
+  background-color: #cfe2d4; /* Couleur de fond pour les avis positifs */
+  color: green; /* Couleur du texte pour les avis positifs */
+}
+
+.negative {
+  background-color: #f8d7da; /* Couleur de fond pour les avis négatifs */
+  color: red; /* Couleur du texte pour les avis négatifs */
+}
+
+.neutre {
+  background-color: #e2e3e5; /* Couleur de fond pour les avis neutres */
+  color: #333; /* Couleur du texte pour les avis neutres */
+}
+
+.sentiment {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.sentiment {
+  animation: fadeIn 0.5s ease-in-out;
+}
+.comment-container {
+  overflow: auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.comments-wrapper {
+  display: flex;
+  animation: scrollComments 10s linear infinite; /* Ajustez la durée et le timing de l'animation selon vos préférences */
+}
+
+.comment-item {
+  flex: 0 0 auto;
+  width: 300px; /* Ajustez la largeur d'un avis selon vos préférences */
+  margin-right: 10px;
+}
+.center {
+  text-align: center;
+}

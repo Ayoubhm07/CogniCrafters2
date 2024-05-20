@@ -1,0 +1,129 @@
+<div class="breadcumb-wrapper" data-bg-src="./assets/assets/img/bg/breadcrumb-bg-1.jpg">
+    <div class="container">
+        <div class="breadcumb-content">
+            <h1 class="breadcumb-title">Verify Your Account !</h1>
+            <p class="breadcumb-description">Welcome! This page is designed for psychiatrists to validate their accounts. Please upload the required documents to confirm your identity.</p>
+        </div>
+    </div>
+</div>
+<section class="process-section space-top space-bottom-shape2-plus">
+    <div class="container">
+        <div class="row mb-20 text-center justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-xl-6 col-lg-7 col-md-8 col-sm-9">
+                <div class="title-area">
+                    <span class="sub-title">Our Process</span>
+                    <h2 class="sec-title">How We Manage Our Patients' Care</h2>
+                </div>
+            </div>
+        </div>
+        <div class="process-area">
+            <div class="row gy-60 justify-content-between">
+                <!-- Single Item -->
+                <div class="col-auto process-box wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="process-box-body">
+                        <span class="process-number">01</span>
+                        <div class="process-content">
+                            <div class="process-icon">
+                                <img src="./assets/assets/img/icon/process2-1.png" alt="icon">
+                            </div>
+                            <h5 class="process-name"><a href="service.html">Discover Available Services</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Item -->
+                <div class="col-auto process-box wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="process-box-body">
+                        <span class="process-number">02</span>
+                        <div class="process-content">
+                            <div class="process-icon">
+                                <img src="./assets/assets/img/icon/process2-2.png" alt="icon">
+                            </div>
+                            <h5 class="process-name"><a href="contact.html">Schedule an Appointment</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Item -->
+                <div class="col-auto process-box wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="process-box-body">
+                        <span class="process-number">03</span>
+                        <div class="process-content">
+                            <div class="process-icon">
+                                <img src="./assets/assets/img/icon/process2-3.png" alt="icon">
+                            </div>
+                            <h5 class="process-name"><a href="classes.html">Begin Your Treatment Journey</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Item -->
+                <div class="col-auto process-box wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="process-box-body">
+                        <span class="process-number">04</span>
+                        <div class="process-content">
+                            <div class="process-icon">
+                                <img src="./assets/assets/img/icon/process2-4.png" alt="icon">
+                            </div>
+                            <h5 class="process-name"><a href="classes.html">Achieve Mental Wellness</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="process-line"><img src="./assets/assets/img/shape/dashed-line-1.png" alt="shape"></div>
+        </div>
+    </div>
+</section>
+
+
+<section class="validation-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="validation-form">
+                    <h2 class="validation-title">Account Validation</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+
+
+<div class="association-verification">
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <img src="./assets/assets/img/security.jpg" alt="Security Image" class="flyer-image img-fluid">
+    </div> 
+    <mat-card>
+        <mat-card-header>
+          <mat-card-title>Association Account Verification</mat-card-title>
+          <mat-card-subtitle>Please fill in the details below to continue.</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <form class="association-form" [formGroup]="associationForm" (ngSubmit)="submitForm()">
+            <mat-form-field appearance="fill">
+              <mat-label>Association Name</mat-label>
+              <input matInput formControlName="name">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Location</mat-label>
+              <input matInput formControlName="location">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Phone</mat-label>
+              <input matInput formControlName="phone">
+            </mat-form-field>
+            <div>
+              <label for="logo">Logo</label>
+              <input type="file" id="logo" formControlName="logo">
+            </div>
+            <div>
+              <label for="taxId">Tax Identification Card</label>
+              <input type="file" id="taxId" formControlName="taxId" #taxIdInput required>
+            </div>
+            <button mat-raised-button color="primary" type="submit">Submit</button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+      
+</div>
+

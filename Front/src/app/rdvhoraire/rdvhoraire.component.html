@@ -1,0 +1,21 @@
+<h2>
+    <span>Available Appointments on </span>
+    <strong>{{ clickedDate }}</strong>
+    <span></span>
+
+</h2>
+<section>
+  <div>
+<ul>
+    <li *ngFor="let horaire of horaires">
+      <div>
+
+      <span>{{ horaire.heureDebut }} - {{ horaire.heureFin }}</span>
+    </div>
+
+      <button [routerLink]="['/addPatient', horaire.psychiatre._id, horaire._id, clickedDate]" routerLinkActive="active">get rdv</button>
+    </li>
+</ul>
+</div>
+</section>
+  
