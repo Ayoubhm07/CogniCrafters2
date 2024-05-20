@@ -1,0 +1,420 @@
+<main class="main-product ">
+
+  <div class="container-fluid py-4">
+  <div class="row">
+  <div class="col-lg-6">
+  <h4>Make the changes below</h4>
+  <p>We’re constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play.</p>
+  </div>
+  <div class="col-lg-6 text-right d-flex flex-column justify-content-center">
+  <button type="button" class="btn bg-gradient-primary mb-0 ms-lg-auto me-lg-0 me-auto mt-lg-0 mt-2">Save</button>
+  </div>
+  </div>
+  <div class="row mt-4">
+  <div class="col-lg-4">
+  <div class="card mt-4" data-animation="true">
+  <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+  <a class="d-block blur-shadow-image">
+  <img  [src]="'http://localhost:8089/' +product?.image" [alt]="product?.name" class="img-fluid shadow border-radius-lg">
+  </a>
+  <div class="colored-shadow" style="background-image: url(https://demos.creative-tim.com/material-dashboard-pro/pages/ecommerce/assets/img/products/product-11.jpg)"></div>
+  </div>
+  <div class="card-body text-center">
+  <div class="mt-n6 mx-auto">
+  <button class="btn bg-gradient-primary btn-sm mb-0 me-2" type="button" name="button">Edit</button>
+  <button class="btn btn-outline-dark btn-sm mb-0" type="button" name="button">Remove</button>
+  </div>
+  <h5 class="font-weight-normal mt-4">
+  Product Image
+  </h5>
+  <p class="mb-0">
+    {{ product?.description }}  </p>
+  </div>
+  </div>
+  </div>
+  <div class="col-lg-8 mt-lg-0 mt-4">
+  <div class="card">
+  <div class="card-body">
+  <h5 class="font-weight-bolder">Product Information</h5>
+  <div class="row mt-4">
+  <div class="col-12 col-sm-6">
+  <div class="input-group input-group-dynamic">
+    <label class="form-label">Name</label>
+    <input type="text" class="form-control w-100" id="productNameInput" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Assurez-vous que 'product' est défini avec les informations du produit sélectionné
+        var product = {
+          name: "Nom du produit sélectionné" // Remplacez cette valeur par le nom du produit sélectionné
+        };
+
+        // Sélectionnez l'élément input par son ID
+        var productNameInput = document.getElementById('productNameInput');
+
+        // Vérifiez si l'élément input existe et si le produit est défini
+        if (productNameInput && product && product.name) {
+          // Définissez la valeur de l'élément input sur le nom du produit
+          productNameInput.value = product.name;
+        } else {
+          console.error("Impossible de remplir le champ 'productNameInput'. Vérifiez que le produit est correctement défini et que l'élément 'productNameInput' existe dans le document.");
+        }
+      });
+    </script>
+
+
+  </div>
+  </div>
+  <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+  <div class="input-group input-group-dynamic">
+  <label class="form-label">Weight</label>
+  <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+  </div>
+  </div>
+  </div>
+  <div class="row mt-4">
+  <div class="col-3">
+  <div class="input-group input-group-dynamic">
+  <label class="form-label">Collection</label>
+  <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+  </div>
+  </div>
+  <div class="col-3">
+  <div class="input-group input-group-dynamic">
+  <label class="form-label">Price</label>
+  <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+  </div>
+  </div>
+  <div class="col-3">
+  <div class="input-group input-group-dynamic">
+  <label class="form-label">Quantity</label>
+  <input type="email" class="form-control w-100" onfocus="focused(this)" onfocusout="defocused(this)">
+  </div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-sm-6">
+  <label class="mt-4">Description</label>
+  <p class="form-text text-muted text-xs ms-1 d-inline">
+  (optional)
+  </p>
+  <div id="edit-deschiption-edit" class="h-50">
+  Long sleeves black denim jacket with a twisted design. Contrast stitching. Button up closure. White arrow prints on the back.
+  </div>
+  </div>
+  <div class="col-sm-6">
+  <label class="mt-4 ms-0">Category</label>
+  <select class="form-control" name="choices-category" id="choices-category-edit">
+  <option value="Choice 1" selected>Furniture</option>
+  <option value="Choice 2">Real Estate</option>
+  <option value="Choice 3">Electronics</option>
+  <option value="Choice 4">Clothing</option>
+  <option value="Choice 5">Others</option>
+  </select>
+  <label class="ms-0">Color</label>
+  <select class="form-control" name="choices-color" id="choices-color-edit">
+  <option value="Choice 1" selected>Black</option>
+  <option value="Choice 2">White</option>
+  <option value="Choice 3">Blue</option>
+  <option value="Choice 4">Orange</option>
+  <option value="Choice 5">Green</option>
+  </select>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="row mt-4">
+  <div class="col-sm-4">
+  <div class="card">
+  <div class="card-body">
+  <h5 class="font-weight-bolder">Socials</h5>
+  <div class="input-group input-group-dynamic mt-3">
+  <label class="form-label">Shoppify Handle</label>
+  <input type="email" class="form-control w-100" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+  </div>
+  <div class="input-group input-group-dynamic my-3">
+  <label class="form-label">Facebook Account</label>
+  <input type="email" class="form-control w-100" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+  </div>
+  <div class="input-group input-group-dynamic">
+  <label class="form-label">Instagram Account</label>
+  <input type="email" class="form-control w-100" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-sm-8 mt-sm-0 mt-4">
+  <div class="card">
+  <div class="card-body">
+  <div class="row">
+  <h5 class="font-weight-bolder mb-3">Pricing</h5>
+  <div class="col-3">
+  <div class=" input-group input-group-dynamic">
+  <label class="form-label">Price</label>
+  <input type="email" class="form-control w-100" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+  </div>
+  </div>
+  <div class="col-4">
+  <select class="form-control" name="choices-sizes" id="choices-currency-edit">
+  <option value="Choice 1" selected>USD</option>
+  <option value="Choice 2">EUR</option>
+  <option value="Choice 3">GBP</option>
+  <option value="Choice 4">CNY</option>
+  <option value="Choice 5">INR</option>
+  <option value="Choice 6">BTC</option>
+  </select>
+  </div>
+  <div class="col-5">
+  <div class="input-group input-group-dynamic">
+  <label class="form-label">SKU</label>
+  <input type="email" class="form-control w-100" aria-describedby="emailHelp" onfocus="focused(this)" onfocusout="defocused(this)">
+  </div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-12">
+  <label class="mt-4">Tags</label>
+  <select class="form-control" name="choices-tags" id="choices-tags-edit" multiple>
+  <option value="Choice 1" selected>In Stock</option>
+  <option value="Choice 2">Out of Stock</option>
+  <option value="Choice 3">Sale</option>
+  <option value="Choice 4">Black Friday</option>
+  </select>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
+  </main>
+<script>// Products gallery
+  // Gallery Carousel
+  // Sélectionner l'élément <input> par son ID
+var productNameInput = document.getElementById('productNameInput');
+
+// Vérifier si product est défini
+if (product) {
+    // Définir la valeur de l'élément <input> sur le nom du produit
+    productNameInput.value = product.name;
+} else {
+    // Si product n'est pas défini, définir la valeur sur une chaîne vide ou une autre valeur par défaut
+    productNameInput.value = '';
+}
+
+  const product_carsousel = document.getElementById('products-carousel')
+
+  if (product_carsousel) {
+    var myCarousel = document.querySelector('#products-carousel')
+    var carousel = new bootstrap.Carousel(myCarousel)
+  }
+
+  var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+    // parse slide data (url, title, size ...) from DOM elements
+    // (children of gallerySelector)
+    var parseThumbnailElements = function(el) {
+      var thumbElements = el.childNodes,
+        numNodes = thumbElements.length,
+        items = [],
+        figureEl,
+        linkEl,
+        size,
+        item;
+
+      for (var i = 0; i < numNodes; i++) {
+
+        figureEl = thumbElements[i]; // <figure> element
+        // include only element nodes
+        if (figureEl.nodeType !== 1) {
+          continue;
+        }
+
+        linkEl = figureEl.children[0]; // <a> element
+
+        size = linkEl.getAttribute('data-size').split('x');
+
+        // create slide object
+        item = {
+          src: linkEl.getAttribute('href'),
+          w: parseInt(size[0], 10),
+          h: parseInt(size[1], 10)
+        };
+
+        if (figureEl.children.length > 1) {
+          // <figcaption> content
+          item.title = figureEl.children[1].innerHTML;
+        }
+
+        if (linkEl.children.length > 0) {
+          // <img> thumbnail element, retrieving thumbnail url
+          item.msrc = linkEl.children[0].getAttribute('src');
+        }
+
+        item.el = figureEl; // save link to element for getThumbBoundsFn
+        items.push(item);
+      }
+
+      return items;
+    };
+
+    // find nearest parent element
+    var closest = function closest(el, fn) {
+      return el && (fn(el) ? el : closest(el.parentNode, fn));
+    };
+
+    // triggers when user clicks on thumbnail
+    var onThumbnailsClick = function(e) {
+      e = e || window.event;
+      e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+      var eTarget = e.target || e.srcElement;
+
+      // find root element of slide
+      var clickedListItem = closest(eTarget, function(el) {
+        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+      });
+
+      if (!clickedListItem) {
+        return;
+      }
+
+      // find index of clicked item by looping through all child nodes
+      // alternatively, you may define index via data- attribute
+      var clickedGallery = clickedListItem.parentNode,
+        childNodes = clickedListItem.parentNode.childNodes,
+        numChildNodes = childNodes.length,
+        nodeIndex = 0,
+        index;
+
+      for (var i = 0; i < numChildNodes; i++) {
+        if (childNodes[i].nodeType !== 1) {
+          continue;
+        }
+
+        if (childNodes[i] === clickedListItem) {
+          index = nodeIndex;
+          break;
+        }
+        nodeIndex++;
+      }
+
+
+
+      if (index >= 0) {
+        // open PhotoSwipe if valid index found
+        openPhotoSwipe(index, clickedGallery);
+      }
+      return false;
+    };
+
+    // parse picture index and gallery index from URL (#&pid=1&gid=2)
+    var photoswipeParseHash = function() {
+      var hash = window.location.hash.substring(1),
+        params = {};
+
+      if (hash.length < 5) {
+        return params;
+      }
+
+      var vars = hash.split('&');
+      for (var i = 0; i < vars.length; i++) {
+        if (!vars[i]) {
+          continue;
+        }
+        var pair = vars[i].split('=');
+        if (pair.length < 2) {
+          continue;
+        }
+        params[pair[0]] = pair[1];
+      }
+
+      if (params.gid) {
+        params.gid = parseInt(params.gid, 10);
+      }
+
+      return params;
+    };
+
+    var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+      var pswpElement = document.querySelectorAll('.pswp')[0],
+        gallery,
+        options,
+        items;
+
+      items = parseThumbnailElements(galleryElement);
+
+      // define options (if needed)
+      options = {
+
+        // define gallery index (for URL)
+        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+        getThumbBoundsFn: function(index) {
+          // See Options -> getThumbBoundsFn section of documentation for more info
+          var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+            pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+            rect = thumbnail.getBoundingClientRect();
+
+          return {
+            x: rect.left,
+            y: rect.top + pageYScroll,
+            w: rect.width
+          };
+        }
+
+      };
+
+      // PhotoSwipe opened from URL
+      if (fromURL) {
+        if (options.galleryPIDs) {
+          // parse real index when custom PIDs are used
+          // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+          for (var j = 0; j < items.length; j++) {
+            if (items[j].pid == index) {
+              options.index = j;
+              break;
+            }
+          }
+        } else {
+          // in URL indexes start from 1
+          options.index = parseInt(index, 10) - 1;
+        }
+      } else {
+        options.index = parseInt(index, 10);
+      }
+
+      // exit if index not found
+      if (isNaN(options.index)) {
+        return;
+      }
+
+      if (disableAnimation) {
+        options.showAnimationDuration = 0;
+      }
+
+      // Pass data to PhotoSwipe and initialize it
+      gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+      gallery.init();
+    };
+
+    // loop through all gallery elements and bind events
+    var galleryElements = document.querySelectorAll(gallerySelector);
+
+    for (var i = 0, l = galleryElements.length; i < l; i++) {
+      galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+      galleryElements[i].onclick = onThumbnailsClick;
+    }
+
+    // Parse URL and open gallery if it contains #&pid=3&gid=1
+    var hashData = photoswipeParseHash();
+    if (hashData.pid && hashData.gid) {
+      openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+    }
+  };
+
+  // execute above function
+  initPhotoSwipeFromDOM('.my-gallery');
+
+</script>

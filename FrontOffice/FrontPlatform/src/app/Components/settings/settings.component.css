@@ -1,0 +1,142 @@
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .avatar:hover .overlay {
+    opacity: 1;
+  }
+
+  .password-strength-container {
+    margin-top: 10px;
+  }
+  
+  .password-strength-meter {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 3px;
+    height: 10px; /* Make the bar thicker for better visibility */
+    overflow: hidden;
+  }
+  
+  .strength-bar {
+    height: 100%;
+    width: 0%;
+    transition: width 0.6s ease, background-color 0.6s ease;
+  }
+  
+  .weak {
+    background-color: #d9534f; /* Bootstrap 'danger' color */
+  }
+  
+  .medium {
+    background-color: #f0ad4e; /* Bootstrap 'warning' color */
+  }
+  
+  .strong {
+    background-color: #5cb85c; /* Bootstrap 'success' color */
+  }
+  
+  .password-strength-text {
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .welcome-assistant {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards, fadeOut 1s 5s forwards; /* Adjust the timing as needed */
+  }
+  
+  .assistant-image {
+    width: 150px; /* Increased size */
+    height: 150px; /* Increased size */
+    margin-right: 10px;
+    animation: bounce 2s infinite; /* Animation for the character */
+  }
+  
+  .speech-bubble {
+    position: relative;
+    background: #f0f0f0;
+    border-radius: .4em;
+    padding: 15px; /* Increased padding */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-size: 1.2rem; /* Increased font size */
+    color: #007bff; /* Attractive color */
+    animation: fadeInBubble 1s forwards; /* Animation for the bubble */
+  }
+  
+  .speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #f0f0f0;
+    border-bottom: 0;
+    margin-left: -10px;
+    margin-bottom: -10px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes fadeInBubble {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  

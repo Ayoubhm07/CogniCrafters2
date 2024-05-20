@@ -1,0 +1,31 @@
+.bg-custom-blue {
+    background-color: #342B7A;
+}
+.btn-color{
+    background-color: #6154C3;
+}
+.sidenav {
+    
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #6154C3;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #6154C3;
+    border-radius: 10px;
+  }
+  .logout-button {
+    background-color: #493484; /* Adjusted color */
+    color: white;
+}
+.custom-icon {
+    width: 20px;
+    height: 20px;
+}

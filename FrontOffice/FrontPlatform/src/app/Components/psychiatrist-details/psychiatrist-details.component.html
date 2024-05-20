@@ -1,0 +1,15 @@
+<div *ngIf="isVisible" class="detail-panel animate__animated animate__fadeInDown">
+  <div class="card">
+    <img [src]="psychiatrist.image || '/assets/img/doctor.jpg'" class="card-img-top" alt="Profile Image">
+    <div class="card-body">
+      <h5 class="card-title">{{ psychiatrist.firstName }} {{ psychiatrist.lastName }}</h5>
+      <p class="card-text"><i class="fas fa-envelope"></i> {{ psychiatrist.email }}</p>
+      <p class="card-text"><i class="fas fa-phone"></i> {{ psychiatrist.phone }}</p>
+      <p class="card-text"><i class="fas fa-map-marker-alt"></i> {{ psychiatrist.adresse }}</p>
+      <div class="btn-group" role="group">
+        <button class="btn btn-primary" >Send Message</button>
+        <button class="btn btn-secondary" (click)="close.emit()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

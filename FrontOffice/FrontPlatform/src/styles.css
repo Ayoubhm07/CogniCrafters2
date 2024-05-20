@@ -1,0 +1,32 @@
+/* styles.css ou styles.scss */
+
+.main-content {
+  margin-left: 265px; /* Ajustez la largeur du side menu selon vos besoins */
+  padding: 20px; /* Ajoutez une marge pour séparer le contenu du side menu */
+}
+.profile-content {
+  margin-left: 300px; /* Ajustez la largeur du side menu selon vos besoins */
+  padding: 20px; /* Ajoutez une marge pour séparer le contenu du side menu */
+  padding-bottom: 80px; /* Ajoutez un espace en bas égal à la hauteur du footer */
+
+}
+.settings-content {
+  margin-left: 300px; /* Ajustez la largeur du side menu selon vos besoins */
+  padding: 20px; /* Ajoutez une marge pour séparer le contenu du side menu */
+  padding-bottom: 100px; /* Ajoutez un espace en bas égal à la hauteur du footer */
+
+}
+.full-width-page {
+  width: 100%;
+  margin-left: 0; /* Assurez-vous que la marge gauche est nulle pour occuper toute la largeur */
+  margin-right: 0;
+}
+.blog-content {
+  margin-left: 400px; /* Ajustez la largeur du side menu selon vos besoins */
+  padding: 20px; /* Ajoutez une marge pour séparer le contenu du side menu */
+
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

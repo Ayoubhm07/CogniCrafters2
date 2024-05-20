@@ -1,0 +1,124 @@
+<main class="main-product">
+  <div class="container-fluid py-4">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header pb-0">
+            <h5 class="mb-0">All Products</h5>
+
+          </div>
+          <div class="ms-auto my-auto">
+            <a href="new-product.html" class="btn bg-gradient-primary btn-sm mb-0" target="_blank">+&nbsp; New Product</a>
+            <button type="button" class="btn btn-outline-primary btn-sm mb-0" data-bs-toggle="modal" data-bs-target="#import">
+            Import
+            </button>
+            <div class="modal fade" id="import" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog mt-lg-10">
+            <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Import CSV</h5>
+            <i class="material-icons ms-3">file_upload</i>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <p>You can browse your computer for a file.</p>
+            <div class="input-group input-group-dynamic mb-3">
+            <label class="form-label">Browse file...</label>
+            <input type="email" class="form-control" onfocus="focused(this)" onfocusout="defocused(this)">
+            </div>
+            <div class="form-check is-filled">
+            <input class="form-check-input" type="checkbox" value="" id="importCheck" checked="">
+            <label class="custom-control-label" for="importCheck">I accept the terms and conditions</label>
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn bg-gradient-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn bg-gradient-primary btn-sm">Upload</button>
+            </div>
+            </div>
+            </div>
+            </div>
+            <button class="btn btn-outline-primary btn-sm export mb-0 mt-sm-0 mt-1" data-type="csv" type="button" name="button">Export</button>
+            </div>
+
+            <div class="dataTable-top"><div class="dataTable-dropdown"><label><select class="dataTable-selector"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option><option value="25">25</option></select> entries per page</label></div><div class="dataTable-search"><input class="dataTable-input" placeholder="Search..." type="text" [(ngModel)]="searchText"></div></div>
+          <div class="card-body px-0 pb-0">
+            <div class="table-responsive">
+              <table class="table table-flush dataTable-table" id="products-list">
+                <thead class="thead-light">
+                  <tr>
+                    <th classe="dataTable-sorter">Product</th>
+                    <th data-sortable="" style="width: 27.2727%;" class=""><a href="#" class="dataTable-sorter">Category</a></th>
+                    <th data-sortable="" style="width: 27.2727%;" class=""><a href="#" class="dataTable-sorter">Price</a></th>
+                    <th data-sortable="" style="width: 27.2727%;" class=""><a href="#" class="dataTable-sorter">SKU</a></th>
+                    <th data-sortable="" style="width: 27.2727%;" class=""><a href="#" class="dataTable-sorter">Quantity</a></th>
+                    <th data-sortable="" style="width: 27.2727%;" class=""><a href="#" class="dataTable-sorter">Status</a></th>
+                    <th data-sortable="" style="width: 27.2727%;" class=""><a href="#" class="dataTable-sorter">Actions</a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let product of filterProducts()" (click)="selectProduct(product)">
+                    <td>
+                      <div class="d-flex">
+                        <div class="form-check my-auto">
+                          <input class="form-check-input" type="checkbox" [id]="'customCheck' + product._id" checked>
+                        </div>
+                        <img class="w-10 ms-3" [src]="'http://localhost:8185/' +product.image" [alt]="product.name">
+                        <h6 class="ms-3 my-auto">{{ product.name }}</h6>
+                      </div>
+                    </td>
+                    <!-- <td class="text-sm">{{ product.categories }}</td> -->
+                    <td class="text-sm">{{ product.price }}</td>
+                    <td class="text-sm">{{ product.sku }}</td>
+                    <td class="text-sm">{{ product.quantity }}</td>
+                    <td>
+                      <span class="badge badge-{{ product.etat ? 'success' : 'danger' }} badge-sm">
+                        {{ product.etat ? 'In Stock' : 'Out of Stock' }}
+                      </span>
+                    </td>
+
+                    <td class="text-sm">
+                      <a href="javascript:;" data-bs-toggle="tooltip" data-bs-original-title="Preview product">
+                        <i class="material-icons text-secondary position-relative text-lg">visibility</i>
+                      </a>
+                      <a [routerLink]="'/editProduct/' + product._id" data-bs-toggle="tooltip" data-bs-original-title="Modifier le produit">
+                        <i class="material-icons text-secondary position-relative text-lg">drive_file_rename_outline</i>
+                      </a>
+
+                      <a href="javascript:;" data-bs-toggle="tooltip" data-bs-original-title="Delete product" *ngIf="product._id" (click)="deleteProduct(product._id)">
+                        <i class="material-icons text-secondary position-relative text-lg">delete</i>
+                      </a>
+
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>SKU</th>
+                    <th>Quantity</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </tfoot>
+              </table>
+              <div class="pagination-container justify-content-center">
+                <ul class="pagination pagination-primary">
+                  <li class="page-item" *ngFor="let page of totalPagesArray()">
+                    <a class="page-link" href="javascript:;" (click)="setCurrentPage(page)">{{ page }}</a>
+                  </li>
+                </ul>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-detail-product *ngIf="isProductSelected" [currentProduct]="currentProduct"></app-detail-product>
+
+</main>

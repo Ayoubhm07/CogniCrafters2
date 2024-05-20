@@ -1,0 +1,175 @@
+.async-hide {
+  opacity: 0 !important
+}
+.badge {
+  --bs-badge-padding-x: 0.9em;
+  --bs-badge-padding-y: 0.55em;
+  --bs-badge-font-size: 0.75em;
+  --bs-badge-font-weight: 700;
+  --bs-badge-color: #fff;
+  --bs-badge-border-radius: 0.45rem;
+  display: inline-block;
+  padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+  font-size: var(--bs-badge-font-size);
+  font-weight: var(--bs-badge-font-weight);
+  line-height: 1;
+  color: var(--bs-badge-color);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--bs-badge-border-radius);
+}
+.badge, .btn {
+  text-transform: uppercase;
+}
+.badge-sm {
+  padding: .45em .775em;
+  font-size: .65em;
+  border-radius: .375rem;
+}
+.badge-danger {
+  color: #f61200;
+  background-color: #fcd3d0;
+}
+.table {
+  --bs-table-color: #7b809a;
+  --bs-table-bg: transparent;
+  --bs-table-border-color: #f0f2f5;
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: #7b809a;
+  --bs-table-striped-bg: rgba(0, 0, 0, .05);
+  --bs-table-active-color: #7b809a;
+  --bs-table-active-bg: rgba(0, 0, 0, .1);
+  --bs-table-hover-color: #7b809a;
+  --bs-table-hover-bg: rgba(0, 0, 0, .075);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--bs-table-color);
+  vertical-align: top;
+  border-color: var(--bs-table-border-color);
+}
+.table {
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+.table {
+  border-collapse: separate;
+  text-indent: initial;
+  border-spacing: 2px;
+}
+.card .card-body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  padding: 1.5rem;
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  color: var(--bs-card-color);
+}
+.card {
+  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-border-width: 0;
+  --bs-card-border-color: rgba(0, 0, 0, .125);
+  --bs-card-border-radius: 0.75rem;
+  --bs-card-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+  --bs-card-inner-border-radius: 0.75rem;
+  --bs-card-cap-padding-y: 0.5rem;
+  --bs-card-cap-padding-x: 1rem;
+  --bs-card-cap-bg: #fff;
+  --bs-card-bg: #fff;
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--bs-card-height);
+  word-wrap: break-word;
+  background-color: var(--bs-card-bg);
+  background-clip: border-box;
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border-radius: var(--bs-card-border-radius);
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1* var(--bs-gutter-y));
+  margin-right: calc(-.5* var(--bs-gutter-x));
+  margin-left: calc(-.5* var(--bs-gutter-x));
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x)* .5);
+  padding-left: calc(var(--bs-gutter-x)* .5);
+  margin-right: auto;
+  margin-left: auto;
+}
+.badge-success {
+  color: #339537;
+  background-color: #bce2be;
+}
+.dataTable-table th a {
+  text-decoration: none;
+  color: inherit;
+}
+.dataTable-sorter {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.dataTable-wrapper .dataTable-container .table thead tr th {
+  padding: .75rem 1.5rem;
+  opacity: .7;
+  font-weight: bolder;
+  color: #7b809a;
+  text-transform: uppercase;
+  font-size: .65rem;
+}
+.table thead th {
+  padding: .75rem 1.5rem;
+  text-transform: capitalize;
+  letter-spacing: 0;
+  border-bottom: 1px solid #f0f2f5;
+}
+.dataTable-table>tfoot>tr>th, .dataTable-table th {
+  vertical-align: bottom;
+  text-align: left;
+}
+.dataTable-wrapper .dataTable-top .dataTable-search input {
+  font-size: .875rem;
+  color: #495057;
+  border: 1px solid #f0f2f5;
+  border-radius: .375rem;
+}
+
+.dataTable-input {
+    padding: 6px 12px;
+}
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+input[type="text" i] {
+  padding-block: 1px;
+  padding-inline: 2px;
+}
+.dataTable-search input {
+  border: 1px solid #ccc; /* Définir une bordure de 1 pixel solide avec une couleur gris clair */
+  border-radius: 5px; /* Ajouter un léger arrondi aux coins */
+  padding: 0.375rem 0.75rem; /* Ajouter un remplissage intérieur pour un aspect plus spacieux */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Ajouter une transition pour une animation fluide */
+}
+
+.dataTable-search input:focus {
+  border-color: #85b7d9; /* Changer la couleur de la bordure lorsqu'elle est en focus */
+  outline: 0; /* Supprimer la bordure bleue autour du champ de recherche lorsqu'il est en focus */
+}

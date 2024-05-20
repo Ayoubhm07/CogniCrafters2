@@ -1,0 +1,81 @@
+.main-new-product {
+  min-height: 120vh; 
+  display: flex;
+  flex-direction: column; 
+}
+
+.container-fluid {
+  flex: 1;
+}
+.dropzone {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.image-preview-container {
+  text-align: center;
+}
+.image-preview {
+  max-width: 100%;
+  max-height: 200px;
+  margin-top: 20px;
+}
+.select-currency, .select-discount {
+  width: 100%;
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  line-height: 1.5;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.select-currency option, .select-discount option {
+  /* Styles pour les options des selects */
+  color: #000;
+}
+
+.main-new-product {
+  padding: 30px 0;
+}
+
+.card {
+  border: none;
+}
+
+.card-header {
+  border-radius: 10px; 
+}
+
+.card-body {
+  border-radius: 10px;
+  padding: 20px; 
+}
+
+.multisteps-form__form {
+  border-radius: 10px; 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+  padding: 20px; /* Réduire l'espacement à l'intérieur du formulaire */
+}
+
+.form-label {
+  font-weight: bold; /* Mettre en gras les étiquettes de formulaire */
+}
+
+.button-row .btn {
+  border-radius: 20px; /* Augmenter légèrement le rayon des coins des boutons de navigation */
+  padding: 8px 20px; /* Réduire l'espacement à l'intérieur des boutons de navigation */
+}
+
+.main-notification {
+  position: relative; /* Assurer que les notifications sont positionnées correctement */
+}
+
+.toast {
+  border-radius: 10px; /* Réduire le rayon des coins des notifications */
+}
+
+.alert-danger {
+  border-radius: 10px; /* Réduire le rayon des coins de l'alerte d'erreur */
+}

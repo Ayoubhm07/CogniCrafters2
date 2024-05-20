@@ -1,0 +1,30 @@
+<div class="container mt-3 text-center">
+  <div class="title-container">
+    <h1 class="animated-title">Clients List</h1>
+  </div>
+  <p class="page-description">This page provides a comprehensive list of clients, allowing you to view and manage their profiles.</p>
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="clients-container">
+        <div class="row">
+          <div *ngFor="let client of clients" class="col-md-6 col-lg-4 mb-4">
+            <div class="card client-card">
+              <img [src]="client.image || '/assets/img/client.jpg'" class="card-img-top" alt="Profile Image">
+              <div class="card-body">
+                <h5 class="card-title">{{ client.firstName }} {{ client.lastName }}</h5>
+                <p class="card-text">{{ client.email }}</p>
+                <div class="btn-group" role="group">
+                  <button class="btn btn-primary" >Visualize</button>
+                  <button class="btn" [ngClass]="{'btn-danger': client.isEnabled, 'btn-success': !client.isEnabled}" (click)="toggleUserStatus(client)">
+                    {{ client.isEnabled ? 'Deactivate' : 'Activate' }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- (click)="selectAndShowClient(client)"  <app-client-details *ngIf="selectedClient" [client]="selectedClient" (close)="clearSelectedClient()"></app-client-details> -->
+</div>
