@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "openai.api.url",
+      "type": "java.lang.String",
+      "description": "Description for openai.api.url."
+  }
+] }

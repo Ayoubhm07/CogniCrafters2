@@ -1,0 +1,53 @@
+
+spring:
+  application:
+    name: api-gateway
+  security:
+    basic:
+      enable: false
+    ignored: "/**"
+  management:
+    security:
+      enabled: false
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+        routes:
+          - id: auth-service
+            uri: lb://USER-SERVICE
+            predicates:
+              - Path=/api/v1/auth/**
+            filters:
+              - name: CircuitBreaker
+                args:
+                  name: USER-SERVICE
+                  fallbackuri: forward:/userServiceFallBack
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
+server:
+  port: 8760
+eureka:
+  instance:
+    hostname: eureka-0
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka
