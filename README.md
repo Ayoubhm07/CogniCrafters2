@@ -27,6 +27,18 @@ Jeux Unity : Jeux interactifs pour les enfants autistes avec intégration de la 
 
 Base de Données : Stockage des données utilisateur, des rendez-vous, des médicaments, des produits, des articles de blog, etc.
 
+Technologies:
+    • Secure Payments: Blockchain
+    • Secure Authentication: Keycloak
+    • Account Verification and Fraud Detection for Psychiatrists and
+    Associations: OCR
+    • Log Management: ELK Stack
+    • Service Communication: Apache Kafka
+    • Containerization and CI/CD: Docker, Kubernetes, GitFlow
+    • Data Collection: Web Scraping
+    • File Management: Minio FileManager
+    • ETL and Database Management: pgAdmin
+
 Prérequis : Unity 3D : Version X.X.X Node.js : Version X.X.X Angular CLI : Version X.X.X Java JDK : Version X.X.X Maven : Version X.X.X
 
 Installation et Exécution : Cloner ce dépôt Git. Installer les dépendances pour le frontend Angular en exécutant npm install dans le dossier frontend. Compiler le frontend Angular en exécutant ng build dans le dossier frontend. Lancer le serveur Spring en exécutant mvn spring-boot:run à la racine du projet. Ouvrir le projet Unity et lancer le jeu pour les enfants autistes. Contributions : Les contributions sont les bienvenues ! Pour contribuer à ce projet, veuillez ouvrir une issue pour discuter des changements que vous souhaitez apporter, ou soumettre directement une pull request.
