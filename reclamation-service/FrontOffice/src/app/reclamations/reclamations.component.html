@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+
+<!-- Mirrored from html.vecurosoft.com/knirpse/demo/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Feb 2024 18:37:21 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Knirpse - Kindergarten & Baby Care Template</title>
+    <meta name="author" content="vecuro_themes">
+    <meta name="description" content="Knirpse - Kindergarten & Baby Care Template">
+    <meta name="keywords" content="Knirpse - Kindergarten & Baby Care Template" >
+    <meta name="robots" content="INDEX,FOLLOW">
+
+
+</head>
+
+<body>
+
+
+    <!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <!--************* Code Start From Here ************* -->
+
+    <!--========== Preloader =========-->
+   
+
+
+
+    <!--======== About Section ========-->
+    <div class="breadcumb-wrapper" data-bg-src="../../assets/img/bg/breadcrumb-bg-1.jpg">
+        <div class="container">
+            <div class="breadcumb-content">
+                <h1 class="breadcumb-title">Mes Réclamations</h1>
+                <ul class="breadcumb-menu">
+                    <li><a href="index.html">Acceuil</a></li>
+                    <li class="active">Mes réclamations</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--======== / About Section ========-->
+
+    <!--======== Cart Section ========-->
+    <div class="vs-cart-wrapper space-page">
+        <div class="container">
+          
+            <form action="#" class="woocommerce-cart-form">
+                <table class="cart_table">
+                    <thead>
+                        <tr>
+                          
+                            <th class="cart-col-productname">Sujet</th>
+                            <th class="cart-col-price">Description</th>
+                            <th class="cart-col-quantity">Date de réclamation</th>
+               
+                            <th class="cart-col-remove">Supprimer réclamation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let rec of recs" class="cart_item">
+                          
+                            <td data-title="Name">
+                                <a class="cart-productname" href="#">{{rec.type}}</a>
+                            </td>
+                            <td data-title="Price">
+                                <span class="cart-productname">{{rec.description}}</span>
+                            </td>
+                         
+                            <td data-title="Total">
+                                <span class="amount"><bdi><span></span>{{ rec.createdAt | date:'dd/MM/yyyy' }}</bdi></span>
+                            </td>
+                            <td data-title="Remove">
+                                <a  type="submit" (click)="deleteRec(rec._id)" class="remove"><i class="fal fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                      
+                        <tr>
+                            <td colspan="6" class="actions">
+                              
+                                <!-- <button type="submit" class="vs-btn">Update cart</button> -->
+                                <a routerLink="/ajouter" class="vs-btn">Ajouter Réclamation</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        
+        </div>
+
+    </div>
+    <!--======== / Cart Section ========-->
+
+    <!--==============================
+	Footer Area
+	==============================-->
+
+    <!--********************************
+			Code End  Here 
+	******************************** -->
+    <ng-toast></ng-toast> 
+
+    <!-- Scroll To Top -->
+    <a href="#" class="scrollToTop scroll-btn"><i class="far fa-arrow-up"></i></a>
+    <!--==============================
+        All Js File
+    ============================== -->
+    <!-- Jquery -->
+    <script src="../../assets/js/jquery-3.5.0.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="../../assets/js/slick.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="../../assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Isotope Filter -->
+    <script src="../../assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="../../assets/js/isotope.pkgd.min.js"></script>
+    <!-- Counter up  -->
+    <script src="../../assets/js/jquery.counterup.min.js"></script>
+    <!-- Parallax  -->
+    <script src="../../assets/js/parallax.min.js"></script>
+    <!-- Custom Carousel -->
+    <script src="../../assets/js/vscustom-carousel.min.js"></script>
+    <!-- Range Slider -->
+    <script src="../../assets/js/jquery-ui.min.js"></script>
+    <!-- WOW JS (Animation JS) -->
+    <script src="../../assets/js/wow.min.js"></script>
+    <!-- Form Js -->
+    <script src="../../assets/js/ajax-mail.js"></script>
+    <!-- Main Js File -->
+    <script src="../../assets/js/main.js"></script>
+
+</body>
+
+
+<!-- Mirrored from html.vecurosoft.com/knirpse/demo/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Feb 2024 18:37:21 GMT -->
+</html>

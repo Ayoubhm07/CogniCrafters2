@@ -1,0 +1,9 @@
+.main-new-product {
+  min-height: 120vh; /* Assurez-vous que le conteneur principal occupe au moins toute la hauteur de la fenêtre */
+  display: flex;
+  flex-direction: column; /* Place les enfants les uns sous les autres */
+}
+
+.container-fluid {
+  flex: 1; /* Fait en sorte que ce conteneur occupe tout l'espace disponible restant */
+}

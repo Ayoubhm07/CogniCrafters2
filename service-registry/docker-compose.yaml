@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  registry-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: registry-service
+    container_name: registry-service
+    ports:
+      - "8761:8761"
+    networks:
+      - my-network
+    environment:
+      - SPRING_APPLICATION_NAME=service-registry
+      - EUREKA_INSTANCE_HOSTNAME=localhost
+      - EUREKA_CLIENT_FETCH_REGISTRY=false
+      - EUREKA_CLIENT_REGISTER_WITH_EUREKA=false
+
+networks:
+  my-network:
+    driver: bridge

@@ -1,0 +1,953 @@
+[
+
+  {
+    "country": "United States",
+    "currency": "Dollar",
+    "code": "USD",
+    "taux": 1.0
+  },
+  {
+    "country": "United Arab Emirates",
+    "currency": "Dirham",
+    "code": "AED",
+    "taux": 3.6725
+  },
+  {
+    "country": "Afghanistan",
+    "currency": "Afghani",
+    "code": "AFN",
+    "taux": 71.498015
+  },
+  {
+    "country": "Albania",
+    "currency": "Lek",
+    "code": "ALL",
+    "taux": 95.33822
+  },
+  {
+    "country": "Armenia",
+    "currency": "Dram",
+    "code": "AMD",
+    "taux": 403.566914
+  },
+  {
+    "country": "Netherlands Antilles",
+    "currency": "Guilder",
+    "code": "ANG",
+    "taux": 1.79
+  },
+  {
+    "country": "Angola",
+    "currency": "Kwanza",
+    "code": "AOA",
+    "taux": 839.089179
+  },
+  {
+    "country": "Argentina",
+    "currency": "Peso",
+    "code": "ARS",
+    "taux": 846.75
+  },
+  {
+    "country": "Australia",
+    "currency": "Dollar",
+    "code": "AUD",
+    "taux": 1.508317
+  },
+  {
+    "country": "Aruba",
+    "currency": "Florin",
+    "code": "AWG",
+    "taux": 1.79
+  },
+  {
+    "country": "Azerbaijan",
+    "currency": "Manat",
+    "code": "AZN",
+    "taux": 1.701245
+  },
+  {
+    "country": "Bosnia-Herzegovina",
+    "currency": "Convertible Mark",
+    "code": "BAM",
+    "taux": 1.78834
+  },
+  {
+    "country": "Barbados",
+    "currency": "Dollar",
+    "code": "BBD",
+    "taux": 2.0
+  },
+  {
+    "country": "Bangladesh",
+    "currency": "Taka",
+    "code": "BDT",
+    "taux": 109.753261
+  },
+  {
+    "country": "Bulgaria",
+    "currency": "Lev",
+    "code": "BGN",
+    "taux": 1.788364
+  },
+  {
+    "country": "Bahrain",
+    "currency": "Dinar",
+    "code": "BHD",
+    "taux": 0.376
+  },
+  {
+    "country": "Burundi",
+    "currency": "Franc",
+    "code": "BIF",
+    "taux": 2852.861007
+  },
+  {
+    "country": "Bermuda",
+    "currency": "Dollar",
+    "code": "BMD",
+    "taux": 1.0
+  },
+  {
+    "country": "Brunei",
+    "currency": "Dollar",
+    "code": "BND",
+    "taux": 1.331841
+  },
+  {
+    "country": "Bolivia",
+    "currency": "Boliviano",
+    "code": "BOB",
+    "taux": 6.929418
+  },
+  {
+    "country": "Brazil",
+    "currency": "Real",
+    "code": "BRL",
+    "taux": 4.945384
+  },
+  {
+    "country": "Bahamas",
+    "currency": "Dollar",
+    "code": "BSD",
+    "taux": 1.0
+  },
+  {
+    "country": "Bhutan",
+    "currency": "Ngultrum",
+    "code": "BTN",
+    "taux": 82.755942
+  },
+  {
+    "country": "Botswana",
+    "currency": "Pula",
+    "code": "BWP",
+    "taux": 13.616668
+  },
+  {
+    "country": "Belarus",
+    "currency": "Ruble",
+    "code": "BYN",
+    "taux": 3.242236
+  },
+  {
+    "country": "Belize",
+    "currency": "Dollar",
+    "code": "BZD",
+    "taux": 2.0
+  },
+  {
+    "country": "Canada",
+    "currency": "Dollar",
+    "code": "CAD",
+    "taux": 1.347204
+  },
+  {
+    "country": "Congo (Kinshasa)",
+    "currency": "Franc",
+    "code": "CDF",
+    "taux": 2734.780513
+  },
+  {
+    "country": "Switzerland",
+    "currency": "Franc",
+    "code": "CHF",
+    "taux": 0.877311
+  },
+  {
+    "country": "Chile",
+    "currency": "Peso",
+    "code": "CLP",
+    "taux": 981.927416
+  },
+  {
+    "country": "China",
+    "currency": "Yuan",
+    "code": "CNY",
+    "taux": 7.196525
+  },
+  {
+    "country": "Colombia",
+    "currency": "Peso",
+    "code": "COP",
+    "taux": 3938.674516
+  },
+  {
+    "country": "Costa Rica",
+    "currency": "Colón",
+    "code": "CRC",
+    "taux": 512.855569
+  },
+  {
+    "country": "Cuba",
+    "currency": "Peso",
+    "code": "CUP",
+    "taux": 24.0
+  },
+  {
+    "country": "Cape Verde",
+    "currency": "Escudo",
+    "code": "CVE",
+    "taux": 100.822307
+  },
+  {
+    "country": "Czech Republic",
+    "currency": "Koruna",
+    "code": "CZK",
+    "taux": 23.15086
+  },
+  {
+    "country": "Djibouti",
+    "currency": "Franc",
+    "code": "DJF",
+    "taux": 177.721
+  },
+  {
+    "country": "Denmark",
+    "currency": "Krone",
+    "code": "DKK",
+    "taux": 6.819869
+  },
+  {
+    "country": "Dominican Republic",
+    "currency": "Peso",
+    "code": "DOP",
+    "taux": 58.459013
+  },
+  {
+    "country": "Algeria",
+    "currency": "Dinar",
+    "code": "DZD",
+    "taux": 141.070823
+  },
+  {
+    "country": "Egypt",
+    "currency": "Pound",
+    "code": "EGP",
+    "taux": 15.69668
+  },
+  {
+    "country": "Eritrea",
+    "currency": "Nakfa",
+    "code": "ERN",
+    "taux": 15.0
+  },
+  {
+    "country": "Ethiopia",
+    "currency": "Birr",
+    "code": "ETB",
+    "taux": 51.716949
+  },
+  {
+    "country": "Fiji",
+    "currency": "Dollar",
+    "code": "FJD",
+    "taux": 2.092662
+  },
+  {
+    "country": "Falkland Islands",
+    "currency": "Pound",
+    "code": "FKP",
+    "taux": 0.748
+  },
+  {
+    "country": "United Kingdom",
+    "currency": "Pound",
+    "code": "GBP",
+    "taux": 0.748
+  },
+  {
+    "country": "Georgia",
+    "currency": "Lari",
+    "code": "GEL",
+    "taux": 3.053141
+  },
+  {
+    "country": "Ghana",
+    "currency": "Cedi",
+    "code": "GHS",
+    "taux": 9.615293
+  },
+  {
+    "country": "Gibraltar",
+    "currency": "Pound",
+    "code": "GIP",
+    "taux": 0.748
+  },
+  {
+    "country": "Gambia",
+    "currency": "Dalasi",
+    "code": "GMD",
+    "taux": 51.6
+  },
+  {
+    "country": "Guinea",
+    "currency": "Franc",
+    "code": "GNF",
+    "taux": 10267.456144
+  },
+  {
+    "country": "Guatemala",
+    "currency": "Quetzal",
+    "code": "GTQ",
+    "taux": 7.790152
+  },
+  {
+    "country": "Guyana",
+    "currency": "Dollar",
+    "code": "GYD",
+    "taux": 209.308603
+  },
+  {
+    "country": "Hong Kong",
+    "currency": "Dollar",
+    "code": "HKD",
+    "taux": 7.767033
+  },
+  {
+    "country": "Honduras",
+    "currency": "Lempira",
+    "code": "HNL",
+    "taux": 24.576299
+  },
+  {
+    "country": "Croatia",
+    "currency": "Kuna",
+    "code": "HRK",
+    "taux": 6.864294
+  },
+  {
+    "country": "Haiti",
+    "currency": "Gourde",
+    "code": "HTG",
+    "taux": 80.468758
+  },
+  {
+    "country": "Hungary",
+    "currency": "Forint",
+    "code": "HUF",
+    "taux": 309.176939
+  },
+  {
+    "country": "Indonesia",
+    "currency": "Rupiah",
+    "code": "IDR",
+    "taux": 15343.122545
+  },
+  {
+    "country": "Israel",
+    "currency": "Shekel",
+    "code": "ILS",
+    "taux": 3.232219
+  },
+  {
+    "country": "Isle of Man",
+    "currency": "Pound",
+    "code": "IMP",
+    "taux": 0.748
+  },
+  {
+    "country": "India",
+    "currency": "Rupee",
+    "code": "INR",
+    "taux": 75.140153
+  },
+  {
+    "country": "Iraq",
+    "currency": "Dinar",
+    "code": "IQD",
+    "taux": 1462.812478
+  },
+  {
+    "country": "Iran",
+    "currency": "Rial",
+    "code": "IRR",
+    "taux": 42105.0
+  },
+  {
+    "country": "Iceland",
+    "currency": "Krona",
+    "code": "ISK",
+    "taux": 122.933216
+  },
+  {
+    "country": "Jersey",
+    "currency": "Pound",
+    "code": "JEP",
+    "taux": 0.748
+  },
+  {
+    "country": "Jamaica",
+    "currency": "Dollar",
+    "code": "JMD",
+    "taux": 157.476033
+  },
+  {
+    "country": "Jordan",
+    "currency": "Dinar",
+    "code": "JOD",
+    "taux": 0.709
+  },
+  {
+    "country": "Japan",
+    "currency": "Yen",
+    "code": "JPY",
+    "taux": 115.7901
+  },
+  {
+    "country": "Kenya",
+    "currency": "Shilling",
+    "code": "KES",
+    "taux": 111.442093
+  },
+  {
+    "country": "Kyrgyzstan",
+    "currency": "Som",
+    "code": "KGS",
+    "taux": 84.801009
+  },
+  {
+    "country": "Cambodia",
+    "currency": "Riel",
+    "code": "KHR",
+    "taux": 4144.219153
+  },
+  {
+    "country": "Comoros",
+    "currency": "Franc",
+    "code": "KMF",
+    "taux": 411.0244
+  },
+  {
+    "country": "North Korea",
+    "currency": "Won",
+    "code": "KPW",
+    "taux": 900.0
+  },
+  {
+    "country": "South Korea",
+    "currency": "Won",
+    "code": "KRW",
+    "taux": 1232.301739
+  },
+  {
+    "country": "Kuwait",
+    "currency": "Dinar",
+    "code": "KWD",
+    "taux": 0.303
+  },
+  {
+    "country": "Cayman Islands",
+    "currency": "Dollar",
+    "code": "KYD",
+    "taux": 0.833
+  },
+  {
+    "country": "Kazakhstan",
+    "currency": "Tenge",
+    "code": "KZT",
+    "taux": 426.389736
+  },
+  {
+    "country": "Laos",
+    "currency": "Kip",
+    "code": "LAK",
+    "taux": 9910.279155
+  },
+  {
+    "country": "Lebanon",
+    "currency": "Pound",
+    "code": "LBP",
+    "taux": 1516.730119
+  },
+  {
+    "country": "Sri Lanka",
+    "currency": "Rupee",
+    "code": "LKR",
+    "taux": 231.748711
+  },
+  {
+    "country": "Liberia",
+    "currency": "Dollar",
+    "code": "LRD",
+    "taux": 207.653784
+  },
+  {
+    "country": "Lesotho",
+    "currency": "Loti",
+    "code": "LSL",
+    "taux": 14.872704
+  },
+  {
+    "country": "Libya",
+    "currency": "Dinar",
+    "code": "LYD",
+    "taux": 4.492948
+  },
+  {
+    "country": "Morocco",
+    "currency": "Dirham",
+    "code": "MAD",
+    "taux": 8.653012
+  },
+  {
+    "country": "Monaco",
+    "currency": "Euro",
+    "code": "MCF",
+    "taux": 0.832866
+  },
+  {
+    "country": "Germany",
+    "currency": "Euro",
+    "code": "EUR",
+    "taux": 1.0
+  },
+  {
+    "country": "Sri Lanka",
+    "currency": "Sri Lankan Rupee",
+    "code": "LKR",
+    "taux": 246.925046
+  },
+  {
+    "country": "Greece",
+    "currency": "Euro",
+    "code": "EUR",
+    "taux": 0.844168
+  },
+  {
+    "country": "France",
+    "currency": "Euro",
+    "code": "EUR",
+    "taux": 0.844168
+  },
+
+
+  {
+    "country": "Moldova",
+    "currency": "Leu",
+    "code": "MDL",
+    "taux": 18.420556
+  },
+  {
+    "country": "Madagascar",
+    "currency": "Ariary",
+    "code": "MGA",
+    "taux": 3933.838932
+  },
+  {
+    "country": "North Macedonia",
+    "currency": "Denar",
+    "code": "MKD",
+    "taux": 54.477349
+  },
+  {
+    "country": "Mali",
+    "currency": "Franc",
+    "code": "MRO",
+    "taux": 267.963667
+  },
+  {
+    "country": "Mauritania",
+    "currency": "Ouguiya",
+    "code": "MRU",
+    "taux": 38.238748
+  },
+  {
+    "country": "Malta",
+    "currency": "Euro",
+    "code": "MTL",
+    "taux": 0.832866
+  },
+  {
+    "country": "Mauritius",
+    "currency": "Rupee",
+    "code": "MUR",
+    "taux": 43.870284
+  },
+  {
+    "country": "Maldives",
+    "currency": "Rufiyaa",
+    "code": "MVR",
+    "taux": 15.478748
+  },
+  {
+    "country": "Malawi",
+    "currency": "Kwacha",
+    "code": "MWK",
+    "taux": 867.280207
+  },
+  {
+    "country": "Mexico",
+    "currency": "Peso",
+    "code": "MXN",
+    "taux": 20.626111
+  },
+  {
+    "country": "Malaysia",
+    "currency": "Ringgit",
+    "code": "MYR",
+    "taux": 4.00494
+  },
+  {
+    "country": "Mozambique",
+    "currency": "Metical",
+    "code": "MZN",
+    "taux": 73.861053
+  },
+  {
+    "country": "Namibia",
+    "currency": "Dollar",
+    "code": "NAD",
+    "taux": 14.872704
+  },
+  {
+    "country": "Nigeria",
+    "currency": "Naira",
+    "code": "NGN",
+    "taux": 355.0
+  },
+  {
+    "country": "Nicaragua",
+    "currency": "Cordoba",
+    "code": "NIO",
+    "taux": 34.884499
+  },
+  {
+    "country": "Norway",
+    "currency": "Krone",
+    "code": "NOK",
+    "taux": 9.013987
+  },
+  {
+    "country": "Nepal",
+    "currency": "Rupee",
+    "code": "NPR",
+    "taux": 119.805644
+  },
+  {
+    "country": "New Zealand",
+    "currency": "Dollar",
+    "code": "NZD",
+    "taux": 1.36425
+  },
+  {
+    "country": "Oman",
+    "currency": "Rial",
+    "code": "OMR",
+    "taux": 0.385058
+  },
+  {
+    "country": "Panama",
+    "currency": "Balboa",
+    "code": "PAB",
+    "taux": 1.0
+  },
+  {
+    "country": "Peru",
+    "currency": "Sol",
+    "code": "PEN",
+    "taux": 4.236878
+  },
+  {
+    "country": "Papua New Guinea",
+    "currency": "Kina",
+    "code": "PGK",
+    "taux": 3.508382
+  },
+  {
+    "country": "Philippines",
+    "currency": "Peso",
+    "code": "PHP",
+    "taux": 50.508048
+  },
+  {
+    "country": "Pakistan",
+    "currency": "Rupee",
+    "code": "PKR",
+    "taux": 177.5
+  },
+  {
+    "country": "Poland",
+    "currency": "Zloty",
+    "code": "PLN",
+    "taux": 3.992035
+  },
+  {
+    "country": "Palestine",
+    "currency": "Shekel",
+    "code": "PSL",
+    "taux": 3.232219
+  },
+  {
+    "country": "Paraguay",
+    "currency": "Guarani",
+    "code": "PYG",
+    "taux": 7073.771287
+  },
+  {
+    "country": "Qatar",
+    "currency": "Rial",
+    "code": "QAR",
+    "taux": 3.64
+  },
+  {
+    "country": "Romania",
+    "currency": "Leu",
+    "code": "RON",
+    "taux": 4.128076
+  },
+  {
+    "country": "Serbia",
+    "currency": "Dinar",
+    "code": "RSD",
+    "taux": 99.548967
+  },
+  {
+    "country": "Russia",
+    "currency": "Ruble",
+    "code": "RUB",
+    "taux": 75.678497
+  },
+  {
+    "country": "Rwanda",
+    "currency": "Franc",
+    "code": "RWF",
+    "taux": 1000.032784
+  },
+  {
+    "country": "Saudi Arabia",
+    "currency": "Rial",
+    "code": "SAR",
+    "taux": 3.75
+  },
+  {
+    "country": "Solomon Islands",
+    "currency": "Dollar",
+    "code": "SBD",
+    "taux": 8.123285
+  },
+  {
+    "country": "Seychelles",
+    "currency": "Rupee",
+    "code": "SCR",
+    "taux": 15.472065
+  },
+  {
+    "country": "Sudan",
+    "currency": "Pound",
+    "code": "SDG",
+    "taux": 439.0
+  },
+  {
+    "country": "Sweden",
+    "currency": "Krona",
+    "code": "SEK",
+    "taux": 9.056151
+  },
+  {
+    "country": "Singapore",
+    "currency": "Dollar",
+    "code": "SGD",
+    "taux": 1.331841
+  },
+  {
+    "country": "Saint Helena",
+    "currency": "Pound",
+    "code": "SHP",
+    "taux": 0.748
+  },
+  {
+    "country": "Sierra Leone",
+    "currency": "Leone",
+    "code": "SLL",
+    "taux": 10198.043121
+  },
+  {
+    "country": "Somalia",
+    "currency": "Shilling",
+    "code": "SOS",
+    "taux": 578.9199
+  },
+  {
+    "country": "Suriname",
+    "currency": "Dollar",
+    "code": "SRD",
+    "taux": 21.503668
+  },
+  {
+    "country": "South Sudan",
+    "currency": "Pound",
+    "code": "SSP",
+    "taux": 177.0
+  },
+  {
+    "country": "São Tomé & Príncipe",
+    "currency": "Dobra",
+    "code": "STN",
+    "taux": 21.386618
+  },
+  {
+    "country": "El Salvador",
+    "currency": "Colon",
+    "code": "SVC",
+    "taux": 8.746517
+  },
+  {
+    "country": "Syria",
+    "currency": "Pound",
+    "code": "SYP",
+    "taux": 2492.768762
+  },
+  {
+    "country": "Swaziland",
+    "currency": "Lilangeni",
+    "code": "SZL",
+    "taux": 14.872704
+  },
+  {
+    "country": "Thailand",
+    "currency": "Baht",
+    "code": "THB",
+    "taux": 32.844769
+  },
+  {
+    "country": "Tajikistan",
+    "currency": "Somoni",
+    "code": "TJS",
+    "taux": 11.420866
+  },
+  {
+    "country": "Turkmenistan",
+    "currency": "Manat",
+    "code": "TMT",
+    "taux": 3.51
+  },
+  {
+    "country": "Tunisia",
+    "currency": "Dinar",
+    "code": "TND",
+    "taux": 2.905807
+  },
+  {
+    "country": "Tonga",
+    "currency": "Pa'anga",
+    "code": "TOP",
+    "taux": 2.251999
+  },
+  {
+    "country": "Turkey",
+    "currency": "Lira",
+    "code": "TRY",
+    "taux": 13.5648
+  },
+  {
+    "country": "Trinidad & Tobago",
+    "currency": "Dollar",
+    "code": "TTD",
+    "taux": 6.765
+  },
+  {
+    "country": "Taiwan",
+    "currency": "Dollar",
+    "code": "TWD",
+    "taux": 28.405862
+  },
+  {
+    "country": "Tanzania",
+    "currency": "Shilling",
+    "code": "TZS",
+    "taux": 2316.787099
+  },
+  {
+    "country": "Ukraine",
+    "currency": "Hryvnia",
+    "code": "UAH",
+    "taux": 27.293576
+  },
+  {
+    "country": "Uganda",
+    "currency": "Shilling",
+    "code": "UGX",
+    "taux": 3611.011121
+  },
+  {
+    "country": "Uruguay",
+    "currency": "Peso",
+    "code": "UYU",
+    "taux": 47.635118
+  },
+  {
+    "country": "Uzbekistan",
+    "currency": "Som",
+    "code": "UZS",
+    "taux": 10822.558485
+  },
+  {
+    "country": "Venezuela",
+    "currency": "Bolivar",
+    "code": "VEF",
+    "taux": 1.0e-5
+  },
+  {
+    "country": "Vietnam",
+    "currency": "Dong",
+    "code": "VND",
+    "taux": 22993.0
+  },
+  {
+    "country": "Vanuatu",
+    "currency": "Vatu",
+    "code": "VUV",
+    "taux": 110.575071
+  },
+  {
+    "country": "Samoa",
+    "currency": "Tala",
+    "code": "WST",
+    "taux": 2.561387
+  },
+  {
+    "country": "Yemen",
+    "currency": "Rial",
+    "code": "YER",
+    "taux": 250.25
+  },
+  {
+    "country": "South Africa",
+    "currency": "Rand",
+    "code": "ZAR",
+    "taux": 14.872704
+  },
+  {
+    "country": "Zambia",
+    "currency": "Kwacha",
+    "code": "ZMW",
+    "taux": 22.847083
+  },
+  {
+    "country": "Zimbabwe",
+    "currency": "Dollar",
+    "code": "ZWL",
+    "taux": 322.000001
+  }
+]

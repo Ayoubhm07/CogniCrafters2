@@ -1,0 +1,257 @@
+<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+  <div class="sidenav-header">
+  <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+  <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
+    <img src="../../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+    <span class="ms-1 font-weight-bold text-white">SociADHD</span>
+  </a>
+  </div>
+  <hr class="horizontal light mt-0 mb-2">
+  <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+  <ul class="navbar-nav">
+    <li class="nav-item mb-2 mt-0">
+      <a data-bs-toggle="collapse" href="#ProfileNav" class="nav-link text-white" aria-controls="ProfileNav" role="button" aria-expanded="false">
+        <img src="../../assets/img/team-3.jpg" class="avatar">
+        <span class="nav-link-text ms-2 ps-1">Association</span>
+        </a>
+        <div class="collapse" id="ProfileNav" style>
+          <ul class="nav ">
+            <li class="nav-item">
+              <a class="nav-link text-white Active " routerLink="/profile" routerLinkActive="router-link-active" >
+                <span class="sidenav-mini-icon"> P </span>
+                <span class="sidenav-normal ms-2 ps-1"> Profile </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white " routerLink="/settings" routerLinkActive="router-link-active">
+              <span class="sidenav-mini-icon"> S </span>
+              <span class="sidenav-normal  ms-3  ps-1"> Settings </span>
+              </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white " routerLink="/security" routerLinkActive="router-link-active">
+                <span class="sidenav-mini-icon"> S </span>
+                <span class="sidenav-normal  ms-3  ps-1"> security </span>
+                </a>
+                </li>
+              </ul>
+            </div>
+            </li>
+            <hr class="horizontal light mt-0">
+            <li class="nav-item">
+            <a data-bs-toggle="collapse" href="#dashboardsExamples" class="nav-link text-white active" aria-controls="dashboardsExamples" role="button" aria-expanded="false">
+            <i class="material-icons-round opacity-10">dashboard</i>
+            <span class="nav-link-text ms-2 ps-1">Dashboards</span>
+            </a>
+            <div class="collapse  show " id="dashboardsExamples">
+            <ul class="nav">
+              <li class="nav-item active">
+                <a class="nav-link text-white active" routerLink="/Dashboard" routerLinkActive="router-link-active">
+                <span class="sidenav-mini-icon"> D </span>
+                <span class="sidenav-normal  ms-2  ps-1"> dashboard </span>
+                </a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link text-white " routerLink="/notifications" routerLinkActive="router-link-active">
+                <span class="sidenav-mini-icon"> N </span>
+                <span class="sidenav-normal  ms-3  ps-1"> Notifications </span>
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white " routerLink="/messages" routerLinkActive="router-link-active">
+                  <span class="sidenav-mini-icon"> M </span>
+                  <span class="sidenav-normal  ms-3  ps-1"> Messages </span>
+                  </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white " routerLink="/calendar" routerLinkActive="router-link-active">
+                    <span class="sidenav-mini-icon"> C </span>
+                    <span class="sidenav-normal  ms-3  ps-1"> calendar </span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white " routerLink="/stat" routerLinkActive="router-link-active">
+                      <span class="sidenav-mini-icon"> S </span>
+                      <span class="sidenav-normal  ms-3  ps-1"> Stat </span>
+                      </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white " routerLink="/map" routerLinkActive="router-link-active">
+                        <span class="sidenav-mini-icon"> M </span>
+                        <span class="sidenav-normal  ms-3  ps-1"> Map </span>
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-white " routerLink="/Typerec" routerLinkActive="router-link-active">
+                          <span class="sidenav-mini-icon"> R </span>
+                          <span class="sidenav-normal  ms-3  ps-1">Type Réclamations </span>
+                          </a>
+                          </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-white " routerLink="/reclamation" routerLinkActive="router-link-active">
+                          <span class="sidenav-mini-icon"> R </span>
+                          <span class="sidenav-normal  ms-3  ps-1"> Réclamations </span>
+                          </a>
+                          </li>
+
+            </ul>
+            </div>
+            </li>
+            <li class="nav-item mt-3">
+              <h6 class="ps-4  ms-2 text-uppercase text-xs font-weight-bolder text-white">PAGES</h6>
+              </li>
+              <li class="nav-item">
+              <a data-bs-toggle="collapse" href="#pagesExamples" class="nav-link text-white " aria-controls="pagesExamples" role="button" aria-expanded="false">
+              <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">image</i>
+              <span class="nav-link-text ms-2 ps-1">Pages</span>
+              </a>
+              <div class="collapse " id="pagesExamples">
+              <ul class="nav ">
+              <li class="nav-item ">
+              <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#usersExample">
+              <span class="sidenav-mini-icon"> E </span>
+              <span class="sidenav-normal  ms-2  ps-1"> Events <b class="caret"></b></span>
+              </a>
+              <div class="collapse " id="usersExample">
+              <ul class="nav nav-sm flex-column">
+              <li class="nav-item">
+              <a class="nav-link text-white " routerLink="/events" routerLinkActive="router-link-active">
+              <span class="sidenav-mini-icon"> E</span>
+              <span class="sidenav-normal  ms-2  ps-1"> Events </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white " routerLink="/AddEvents" routerLinkActive="router-link-active">
+              <span class="sidenav-mini-icon">E</span>
+              <span class="sidenav-normal  ms-2  ps-1">Add Events</span>
+              </a>
+              </li>
+
+              </ul>
+              </div>
+              </li>
+              <li class="nav-item ">
+              <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#accountExample">
+              <span class="sidenav-mini-icon"> D </span>
+              <span class="sidenav-normal  ms-2  ps-1"> Donnation <b class="caret"></b></span>
+              </a>
+              <div class="collapse " id="accountExample">
+              <ul class="nav nav-sm flex-column">
+              <li class="nav-item">
+              <a class="nav-link text-white " routerLink="security" routerLinkActive="router-link-active">
+              <span class="sidenav-mini-icon"> D </span>
+              <span class="sidenav-normal  ms-2  ps-1"> Donnation </span>
+              </a>
+              </li>
+
+              </ul>
+              </div>
+              </li>
+              <li class="nav-item ">
+              <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#projectsExample">
+              <span class="sidenav-mini-icon"> B </span>
+              <span class="sidenav-normal  ms-2  ps-1"> Blog<b class="caret"></b></span>
+              </a>
+              <div class="collapse " id="projectsExample">
+              <ul class="nav nav-sm flex-column">
+              <li class="nav-item">
+              <a class="nav-link text-white " routerLink="/addBlog" routerLinkActive="router-link-active">
+              <span class="sidenav-mini-icon"> N </span>
+              <span class="sidenav-normal  ms-2  ps-1"> News </span>
+              </a>
+              </li>
+              </ul>
+              </div>
+              </li>
+              </ul>
+              </div>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#ecommerceExamples" class="nav-link text-white " aria-controls="ecommerceExamples" role="button" aria-expanded="false">
+                <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">shopping_basket</i>
+                <span class="nav-link-text ms-2 ps-1">Ecommerce</span>
+                </a>
+                <div class="collapse " id="ecommerceExamples">
+                <ul class="nav ">
+                <li class="nav-item ">
+                <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#productsExample">
+                <span class="sidenav-mini-icon"> P </span>
+                <span class="sidenav-normal  ms-2  ps-1"> Products <b class="caret"></b></span>
+                </a>
+                <div class="collapse " id="productsExample">
+                <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                <a class="nav-link text-white " routerLink="/newProduct"routerLinkActive="router-link-active">
+                <span class="sidenav-mini-icon"> N </span>
+                <span class="sidenav-normal  ms-2  ps-1"> New Product </span>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-white " routerLink="/editProduct"routerLinkActive="router-link-active">
+                <span class="sidenav-mini-icon"> E </span>
+                <span class="sidenav-normal  ms-2  ps-1"> Edit Product </span>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-white " routerLink="/detailProduct"routerLinkActive="router-link-active">
+                <span class="sidenav-mini-icon"> P </span>
+                <span class="sidenav-normal  ms-2  ps-1"> Product Page </span>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-white " routerLink="/listeProduct" routerLinkActive="router-link-active">
+                <span class="sidenav-mini-icon"> P </span>
+                <span class="sidenav-normal  ms-2  ps-1"> Products List </span>
+                </a>
+                </li>
+                </ul>
+                </div>
+                </li>
+                <li class="nav-item ">
+                <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#ordersExample">
+                <span class="sidenav-mini-icon"> O </span>
+                <span class="sidenav-normal  ms-2  ps-1"> Orders <b class="caret"></b></span>
+                </a>
+                <div class="collapse " id="ordersExample">
+                <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                <a class="nav-link text-white " routerLink="/listeOrders" routerLinkActive="router-link-active">
+                <span class="sidenav-mini-icon"> O </span>
+                <span class="sidenav-normal  ms-2  ps-1"> Order List </span>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-white " routerLink="detailOrder" routerLinkActive="router-link-active">
+                <span class="sidenav-mini-icon"> O </span>
+                <span class="sidenav-normal  ms-2  ps-1"> Order Details </span>
+                </a>
+                </li>
+                </ul>
+                </div>
+                </li>
+                <li class="nav-item ">
+                <a class="nav-link text-white " href="https://demos.creative-tim.com/material-dashboard-pro/pages/ecommerce/referral.html">
+                <span class="sidenav-mini-icon"> R </span>
+                <span class="sidenav-normal  ms-2  ps-1"> Referral </span>
+                </a>
+                </li>
+                </ul>
+                </div>
+                </li>
+
+  </ul>
+  </div>
+  <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+  
+    <div class="mx-3">
+      <div>
+        <button class="btn bg-gradient-primary w-100" (click)="logout()">Logout</button>
+      </div>
+  </div>
+  
+  <div class="mx-3">
+    <a class="btn bg-gradient-primary w-100" routerLink="/logOut" type="button">SignUp</a>
+
+  </div>
+  </div>
+  </aside>
